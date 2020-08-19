@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\services\productDetailService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 
@@ -29,5 +30,10 @@ class RoutingController extends Controller
     {
         self::$active ='contact';
         return view('contact');
+    }
+    public function productDetail($rowid)
+    {
+        $product = productDetailService::getProductData($rowid);
+        return view('productDetail')->with('product',$product);
     }
 }
