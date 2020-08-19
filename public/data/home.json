@@ -1,0 +1,67 @@
+{
+    "data": {
+        "session_header": {
+            "sheader_title_header": "Produits, Assistance et Outils de haute Qualité",
+            "sheader_description_header": "la pandémie de covid-19 oblige le monde à trouver de nouvelles façons de rester connecté et travailler ensemble. les solutions de travail à distance de notre entreprise fournissent aux entreprises les outils qui permettent de collaborer à domicile.",
+            "sheader_btn_produit": "Commençons",
+            "sheader_btn_produit_url": "https://www.google.com",
+            "sheader_btn_video_text": "Regarder la Vidéo",
+            "sheader_btn_video_url": "https://www.youtube.com/watch?v=oqmcvxzbRJs"
+        },
+        "session_aboutUs": {
+            "saboutUs_title": "À PROPOS DE NOUS",
+            "saboutUs_description_left": "Depuis sa création, Son large département de produits et services, Afric Domotique est bien placé pour satisfaire aux exigences d’une large gamme de clients.",
+            "saboutUs_description_right": "La société Afric Domotique, à été crée en 2011, spécialisée dans la telecommunication et vente de matériel informatique, fournitures de bureau, services informatiques.",
+            "saboutUs_li_text": ["L’équipe Afric Domotique intervient pour accompagner ses partenaires dans le choix des solutions technique.",
+                "Afric Domotique offre son accompagnement aux intégrateurs services tertiaire et industriel.",
+                "Nous proposons à nos clients des services complètes pour les professionnels, simple et compétitive."
+            ],
+            "saboutUs_btn_more": "lire encore",
+            "saboutUs_btn_more_url": "https://www.google.com"
+
+        },
+        "session_whyUs": {
+            "swhyUs_title": "POURQUOI Choisir Afric Domotique ?",
+            "swhyUs_description": "Depuis 2 ans, Afric Domotique accompagne et conseille les entreprises professionnels pour mieux communiquer ! Spécialistes de la vente à distance de matériel de téléphonie, sécurité et services.",
+            "swhyUs_label": [{
+                    "question": "NOS ÉQUIPEMENTS DE COMMUNICATION AU MEILLEUR PRIX ?",
+                    "answer": "Parce que votre matériel de télécommunication est primordial pour votre activité professionnelle, nous vous proposons des produits de marques, conçus pour durer dans le temps et au meilleur prix, grâce à une relation directe et permanente avec les principaux constructeurs du marché."
+                },
+                {
+                    "question": "VOUS AVEZ AFFAIRE À DES PROFESSIONNELS ?",
+                    "answer": "Une équipe de vente formée et motivée est le cœur du dispositif dans chaque pays. Elle saura vous orienter vers les solutions convenant le mieux à vos besoins et à votre activité, en vous fournissant des informations claires. Notre Service après vente vous guide également par téléphone pour la mise en service ou toute question liée à l’utilisation de votre matériel."
+                },
+                {
+                    "question": "UN STOCK PERMANENT ?",
+                    "answer": "Votre commande répond à un besoin immédiat qui ne peut attendre. Nous disposons d'un stock sur site important de produits et d'une équipe logistique dynamique, à plein temps, pour réceptionner et envoyer les commandes."
+                }
+            ]
+        },
+        "session_services": {
+            "sServices_title": "SERVICES",
+            "sServices_description": "Les produits de Afric Domotique sont conformes aux plates-formes de communication les plus populaires au monde, Nos produits pris en charge sur n'importe quelle plate-forme et sont faciles à utiliser, à installer, à provisionner et à personnaliser.",
+            "sServices_label": [{
+                    "title": "TECHNIQUE",
+                    "description": "Un Support technique réactif et performant.",
+                    "logo": "bx bx-basketball"
+                },
+                {
+                    "title": "STOCK",
+                    "description": "La garantie d’une totale disponibilité de la marchandise.",
+                    "logo": "bx bx-basketball"
+                },
+                {
+                    "title": "ETUDE",
+                    "description": "Une équipe expérimentée capable d’étudier vos besoins afin d’y répondre efficacement.",
+                    "logo": "bx bx-basketball"
+                },
+                {
+                    "title": "SAV",
+                    "description": "Un service après-vente rapide et efficace.",
+                    "logo": "bx bx-basketball"
+                }
+            ],
+            "sServices_url": "google.com"
+        }
+    }
+}
