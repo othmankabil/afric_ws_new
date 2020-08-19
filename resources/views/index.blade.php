@@ -6,7 +6,7 @@
 
 
         <div class="header-empty-space"></div>
-        <!-- BODY -->
+    
         <section id="hero" class="d-flex align-items-center">
 
             <div class="container">
