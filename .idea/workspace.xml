@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand />
-    <select />
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/othman" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42d68319-679a-4299-94a8-630641dcc05d" name="Default Changelist" comment="First Commit" />
+    <list default="true" id="42d68319-679a-4299-94a8-630641dcc05d" name="Default Changelist" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/app/llx_categorie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/llx_ecm_files.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/CategorieService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/ProductService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoutingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoutingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/llx_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/llx_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shared_layout/header_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared_layout/header_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +62,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
@@ -145,14 +185,14 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Abdellah benchelha\Documents\GitHub\afric_ws_new" />
       <recent name="C:\Users\AFRIC DOMOTIQUE\Desktop\SiteWeb_Afric-domotique_V1\website_AfricDomotique_laravel\resources\views" />
+      <recent name="C:\Users\Abdellah benchelha\Documents\GitHub\afric_ws_new" />
       <recent name="C:\Users\AFRIC DOMOTIQUE\Desktop\SiteWeb_Afric-domotique_V1\website_AfricDomotique_laravel\resources\views\shared_layout" />
       <recent name="C:\Users\AFRIC DOMOTIQUE\Desktop\SiteWeb_Afric-domotique_V1\website_AfricDomotique_laravel\public" />
     </key>
@@ -161,6 +201,10 @@
     <option name="myCommands">
       <command value="php artisan make:controller RoutingController" />
       <command value="php artisan serve" />
+
+      <command value="php artisan make:model  llx_ecm_files " />
+      <command value="php artisan make:model  llx_categorie" />
+
     </option>
   </component>
   <component name="RunManager">
@@ -188,9 +232,11 @@
       <workItem from="1597837309197" duration="14000" />
       <workItem from="1597837329978" duration="719000" />
       <workItem from="1597838119862" duration="11000" />
-      <workItem from="1597838476176" duration="12000" />
+      <workItem from="1597838476176" duration="334000" />
       <workItem from="1597838945242" duration="57000" />
-      <workItem from="1597911920427" duration="7232000" />
+
+      <workItem from="1597912976942" duration="8066000" />
+
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1597835736213</created>
@@ -265,6 +311,17 @@
                   <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/othman" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -281,50 +338,60 @@
     <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="221" y="0" key="#CLI_Interpreters" timestamp="1597838806453">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="221" y="0" key="#CLI_Interpreters/0.0.1280.680@0.0.1280.680" timestamp="1597838806453" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1597839884427">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1597839884427" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1597838005205">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1597838005205" />
-    <state x="439" y="190" key="Github.ShareDialog" timestamp="1597837942957">
+    <state x="439" y="190" key="Github.ShareDialog" timestamp="1597838543911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="439" y="190" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1597837942957" />
-    <state x="213" y="47" key="Github.UntrackedFilesDialog" timestamp="1597763517097">
+    <state x="439" y="190" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1597838543911" />
+    <state x="305" y="30" key="Github.UntrackedFilesDialog" timestamp="1597838645215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="213" y="47" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597763517097" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1597911969088">
-      <screen x="0" y="0" width="1366" height="738" />
+
+    <state x="305" y="30" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597838645215" />
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom" timestamp="1597928529052">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1239" height="121" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1597911969088" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1597911969087">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
+    <state width="1237" height="144" key="GridCell.Tab.0.center" timestamp="1597928529052">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1239" height="121" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1597911969087" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1597911969086">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1237" height="144" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
+    <state width="1237" height="144" key="GridCell.Tab.0.left" timestamp="1597928529052">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1239" height="121" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1597911969086" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1597911969087">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1237" height="144" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right" timestamp="1597928529052">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1239" height="121" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1597911969087" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
+    <state x="245" y="64" key="NewPhpClassDialog" timestamp="1597922493886">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="245" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1597922493886" />
+
     <state x="292" y="61" key="RollbackChangesDialog" timestamp="1597836431733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="292" y="61" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597836431733" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1597838487174">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1597838812671">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1597838487174" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1597837702872">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1597838812671" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1597852072887">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597837702872" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1597852072887" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597835803968">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -333,14 +400,19 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="300" y="75" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1280.680@0.0.1280.680" timestamp="1597837433010" />
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597837508079">
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597914256477">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1597837508079" />
-    <state x="317" y="164" width="718" height="735" key="run.anything.popup" timestamp="1597927394376">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1597914256477" />
+    <state x="299" y="54" key="git4idea.branch.GitSmartOperationDialog" timestamp="1597839547665">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1597758803688" />
-    <state x="317" y="164" width="718" height="735" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1597927394376" />
+
+    <state x="299" y="54" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.680@0.0.1280.680" timestamp="1597839547665" />
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1597922410563">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1597922410563" />
+
   </component>
 </project>

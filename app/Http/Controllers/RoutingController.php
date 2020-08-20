@@ -39,4 +39,8 @@ class RoutingController extends Controller
             abort(404);
         return view('productDetail')->with('product',$product);
     }
+    public function products()
+    {
+        return view('products');
+    }
 }

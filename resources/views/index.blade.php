@@ -1,12 +1,11 @@
 @extends('shared_layout.header_footer')
-
 @section('content')
 
     <div id="content-block">
 
 
         <div class="header-empty-space"></div>
-    
+
         <section id="hero" class="d-flex align-items-center">
 
             <div class="container">
