@@ -73,7 +73,7 @@
 
                             <div class="row m5 col-xs-b40">
                                 <div class="col-sm-6 col-xs-b10 col-sm-b0">
-                                    <a class="button size-2 style-2 block" href="#">
+                                    <a class="button size-2 style-2 block open-popup" data-rel="5">
                                         <span class="button-wrapper">
                                             <span class="icon"><img src="img/icon-2.png" alt=""></span>
                                             <span class="text">Demande Devis</span>
@@ -85,6 +85,7 @@
                                     <span class="button-wrapper">
                                         <span class="icon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
                                         <span class="text">add to favourites</span>
+
                                     </span>
                                     </a>
                                 </div>
@@ -196,6 +197,61 @@
 
         </div>
     </div>
+    <div class="popup-wrapper">
+        <div class="bg-layer"></div>
+
+        <div class="popup-content" data-rel="5">
+            <div class="layer-close"></div>
+            <div class="popup-container size-1">
+                <div class="popup-align">
+                    <h3 class="h3 text-center">Demande Devis</h3>
+                    <form id="formDemande" >
+                    <div class="empty-space col-xs-b30"></div>
+                    <input class="simple-input" type="text" value="" placeholder="Nom" required />
+                    <div class="empty-space col-xs-b10 col-sm-b10"></div>
+                    <input class="simple-input" type="text" value="" placeholder="Prénom" required/>
+                    <div class="empty-space col-xs-b10 col-sm-b10"></div>
+                    <input class="simple-input" type="text" value="" placeholder="Email" required/>
+                    <div class="empty-space col-xs-b10 col-sm-b10"></div>
+                    <input class="simple-input" type="text" value="" placeholder="Numéro de téléphone" required/>
+                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-b10 col-sm-b0">
+                        </div>
+                        <div class="col-sm-10 text-right">
+                            <a class="button size-2 style-3" id="submitForm">
+                                <span class="button-wrapper">
+                                    <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                    <span class="text">Demander</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="button-close"></div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.getElementById("submitForm").onclick = function() {
+            if ($("form")[0].checkValidity())
+            {
+                $("form").submit()
+            }
+
+            $('form :input[required="required"]').each(function()
+            {
+                if(!this.validity.valid)
+                {
+                    $(this).focus();
+                    // break
+                    return false;
+                }
+            });
+        }
+    </script>
 @endsection
 
 
