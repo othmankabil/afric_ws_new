@@ -19,27 +19,19 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/othman" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:othman" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42d68319-679a-4299-94a8-630641dcc05d" name="Default Changelist" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/app/llx_categorie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/llx_ecm_files.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/CategorieService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/ProductService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="42d68319-679a-4299-94a8-630641dcc05d" name="Default Changelist" comment="addes services and models and products page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoutingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoutingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/llx_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/llx_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shared_layout/header_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared_layout/header_footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/CategorieService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/CategorieService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productDetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productDetail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -187,7 +178,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -200,11 +191,9 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="php artisan make:controller RoutingController" />
-      <command value="php artisan serve" />
-
       <command value="php artisan make:model  llx_ecm_files " />
       <command value="php artisan make:model  llx_categorie" />
-
+      <command value="php artisan serve" />
     </option>
   </component>
   <component name="RunManager">
@@ -234,9 +223,8 @@
       <workItem from="1597838119862" duration="11000" />
       <workItem from="1597838476176" duration="334000" />
       <workItem from="1597838945242" duration="57000" />
-
       <workItem from="1597912976942" duration="8066000" />
-
+      <workItem from="1597931203468" duration="5295000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1597835736213</created>
@@ -357,37 +345,35 @@
     <state x="305" y="30" key="Github.UntrackedFilesDialog" timestamp="1597838645215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-
     <state x="305" y="30" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597838645215" />
-    <state width="1237" height="144" key="GridCell.Tab.0.bottom" timestamp="1597928529052">
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom" timestamp="1597931308047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="144" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
-    <state width="1237" height="144" key="GridCell.Tab.0.center" timestamp="1597928529052">
+    <state width="1237" height="144" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597931308047" />
+    <state width="1237" height="144" key="GridCell.Tab.0.center" timestamp="1597931308047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="144" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
-    <state width="1237" height="144" key="GridCell.Tab.0.left" timestamp="1597928529052">
+    <state width="1237" height="144" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597931308047" />
+    <state width="1237" height="144" key="GridCell.Tab.0.left" timestamp="1597931308047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="144" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
-    <state width="1237" height="144" key="GridCell.Tab.0.right" timestamp="1597928529052">
+    <state width="1237" height="144" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597931308047" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right" timestamp="1597931308047">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="144" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597928529052" />
+    <state width="1237" height="144" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597931308047" />
     <state x="245" y="64" key="NewPhpClassDialog" timestamp="1597922493886">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="245" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1597922493886" />
-
     <state x="292" y="61" key="RollbackChangesDialog" timestamp="1597836431733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="292" y="61" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597836431733" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1597838812671">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1597931261085">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1597838812671" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1597931261085" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1597852072887">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -407,12 +393,10 @@
     <state x="299" y="54" key="git4idea.branch.GitSmartOperationDialog" timestamp="1597839547665">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-
     <state x="299" y="54" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.680@0.0.1280.680" timestamp="1597839547665" />
-    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1597922410563">
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1597931282494">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1597922410563" />
-
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1597931282494" />
   </component>
 </project>
