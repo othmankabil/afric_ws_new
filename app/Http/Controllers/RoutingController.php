@@ -36,4 +36,8 @@ class RoutingController extends Controller
         $product = productDetailService::getProductData($rowid);
         return view('productDetail')->with('product',$product);
     }
+    public function products()
+    {
+        return view('products');
+    }
 }
