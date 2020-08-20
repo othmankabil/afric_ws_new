@@ -159,8 +159,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="php artisan serve" />
       <command value="php artisan make:controller RoutingController" />
+      <command value="php artisan serve" />
     </option>
   </component>
   <component name="RunManager">
@@ -190,6 +190,7 @@
       <workItem from="1597838119862" duration="11000" />
       <workItem from="1597838476176" duration="12000" />
       <workItem from="1597838945242" duration="57000" />
+      <workItem from="1597911920427" duration="7232000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1597835736213</created>
@@ -292,22 +293,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="213" y="47" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597763517097" />
-    <state width="1239" height="121" key="GridCell.Tab.0.bottom" timestamp="1597766042610">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1597911969088">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1239" height="121" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1239" height="121" key="GridCell.Tab.0.center" timestamp="1597766042610">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1597911969088" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1597911969087">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1239" height="121" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1239" height="121" key="GridCell.Tab.0.left" timestamp="1597766042610">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1597911969087" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1597911969086">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1239" height="121" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
-    <state width="1239" height="121" key="GridCell.Tab.0.right" timestamp="1597766042610">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1597911969086" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1597911969087">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1239" height="121" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597766042610" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1597911969087" />
     <state x="292" y="61" key="RollbackChangesDialog" timestamp="1597836431733">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -332,9 +337,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1597837508079" />
-    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1597758803688">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="317" y="164" width="718" height="735" key="run.anything.popup" timestamp="1597927394376">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1597758803688" />
+    <state x="317" y="164" width="718" height="735" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1597927394376" />
   </component>
 </project>

@@ -33,7 +33,10 @@ class RoutingController extends Controller
     }
     public function productDetail($rowid)
     {
+        self::$active ='index';
         $product = productDetailService::getProductData($rowid);
+        if($product==null)
+            abort(404);
         return view('productDetail')->with('product',$product);
     }
 }

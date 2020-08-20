@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="http://127.0.0.1:8000/">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -485,22 +486,7 @@
     <script src="assets/js/main.js"></script>
     @yield('content')
     </body>
-<footer id="footer">
-
-    <!--div class="footer-newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h4>Abonnez-vous maintenant et recevez des offres spéciales</h4>
-                </div>
-                <div class="col-lg-4">
-                <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div-->
+   <footer id="footer">
 
     <div class="footer-top">
         <div class="container">
