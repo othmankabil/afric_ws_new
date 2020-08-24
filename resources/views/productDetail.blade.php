@@ -26,39 +26,15 @@
                                     <div class="swiper-button-prev hidden"></div>
                                     <div class="swiper-button-next hidden"></div>
                                     <div class="swiper-wrapper">
+                                        @foreach(\App\services\ProductService::getimages($product->ref) as $path)
                                         <div class="swiper-slide">
                                             <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-5.jpg"></div>
+                                            <div class="product-big-preview-entry swiper-lazy" data-background="{{asset($path)}}"></div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-5.jpg"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-6.jpg"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-7.jpg"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-8.jpg"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-9.jpg"></div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <div class="product-big-preview-entry swiper-lazy" data-background="img/product-preview-10.jpg"></div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                         <div class="col-sm-6">
                             <div class="simple-article size-3 grey col-xs-b5">SMART WATCHES</div>
