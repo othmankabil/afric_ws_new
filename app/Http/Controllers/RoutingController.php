@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\services\CategorieService;
 use App\services\productDetailService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
@@ -41,6 +42,6 @@ class RoutingController extends Controller
     }
     public function products()
     {
-        return view('products');
+        return view('products',['categories'=>CategorieService::getMotherlessCategories()]);
     }
 }
