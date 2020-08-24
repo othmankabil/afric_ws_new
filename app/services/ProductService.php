@@ -4,6 +4,9 @@
 namespace App\services;
 
 
+use App\llx_ecm_files;
+use Illuminate\Support\Facades\Storage;
+
 class ProductService
 {
     public static function check_image($image_url)
