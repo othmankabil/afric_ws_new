@@ -5,6 +5,7 @@ namespace App\services;
 
 
 use App\llx_ecm_files;
+use App\llx_product;
 use Illuminate\Support\Facades\Storage;
 
 class ProductService
@@ -21,7 +22,7 @@ class ProductService
     {
         $image_path_array= array();
         //tcheck if directory with name of product reference exist in 'produit'
-        $exist = Storage::disk('images_url')->exists('ProductRef1');
+        $exist = Storage::disk('images_url')->exists($productRef);
         if ($exist)
         {
             $image_rows = llx_ecm_files::where('filepath','=','produit/'.$productRef)->get();
@@ -36,4 +37,29 @@ class ProductService
         }
         return $image_path_array;
     }
+    public static function getSingleImage($productRef)
+    {
+        $image_path = null;
+        //tcheck if directory with name of product reference exist in 'produit'
+        $exist = Storage::disk('images_url')->exists($productRef);
+
+        if ($exist)
+        {
+            $image_row = llx_ecm_files::where('filepath','=','produit/'.$productRef)->first();
+            if(self::check_image($image_row->filename))
+            {
+                $image_path = $image_row->filepath.'/'.$image_row->filename;
+            }
+            return $image_path;
+        }
+        return $image_path;
+    }
+    public static function getAlProducts()
+    {
+        $productsByDate = llx_product::orderBy('datec','desc')->paginate(1);
+        if(!$productsByDate->isEmpty())
+            return $productsByDate;
+        return null;
+    }
+
 }
