@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\services\CategorieService;
 use App\services\productDetailService;
+use App\services\ProductService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 
@@ -13,7 +14,7 @@ class RoutingController extends Controller
 
     public function index()
     {
-         self::$active ='index';
+        self::$active ='index';
         return view('index');
     }
 
@@ -22,16 +23,19 @@ class RoutingController extends Controller
         self::$active ='aboutUs';
         return view('aboutUs');
     }
+
     public function services()
     {
         self::$active ='services';
         return view('services');
     }
+
     public function contact()
     {
         self::$active ='contact';
         return view('contact');
     }
+
     public function productDetail($rowid)
     {
         self::$active ='index';
@@ -40,8 +44,12 @@ class RoutingController extends Controller
             abort(404);
         return view('productDetail')->with('product',$product);
     }
+
     public function products()
     {
-        return view('products',['categories'=>CategorieService::getMotherlessCategories()]);
+        self::$active ='products';
+        $motherlessCats = CategorieService::getMotherlessCategories();
+        $allProducts = ProductService::getAlProducts();
+        return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts]);
     }
 }

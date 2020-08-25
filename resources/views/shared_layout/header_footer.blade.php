@@ -84,8 +84,8 @@
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='aboutUs')?('active'): ('')}}">
                                         <a href="{{action('RoutingController@aboutUs')}}">à propos de nous</a>
                                     </li>
-                                    <li class="{{(\App\Http\Controllers\RoutingController::$active=='Products')?('active'): ('')}}">
-                                        <a href="{{action('RoutingController@index')}}">Produits</a>
+                                    <li class="{{(\App\Http\Controllers\RoutingController::$active=='products')?('active'): ('')}}">
+                                        <a href="products?page=1">Produits</a>
                                     </li>
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='services')?('active'): ('')}}">
                                         <a href="{{action('RoutingController@services')}}">Services</a>
