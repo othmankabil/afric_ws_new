@@ -3,8 +3,6 @@
 @section('content')
 
     <div id="content-block">
-
-
         <div class="header-empty-space"></div>
 
         <div class="container">
