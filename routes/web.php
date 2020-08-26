@@ -10,4 +10,6 @@ Route::get('contact',"RoutingController@contact");
 
 Route::get('/productDetail/{rowid}',"RoutingController@productDetail");
 Route::get('products',"RoutingController@products");
+Route::get('/sendMail',"RoutingController@sendMail");
+Route::post('/saveDevis',"RoutingController@sendMail");
 
