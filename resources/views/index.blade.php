@@ -34,7 +34,7 @@
         <main id="main">
 
             <!-- ======= Cliens Section ======= -->
-            <section id="cliens" class="cliens ">
+            <!--section id="cliens" class="cliens ">
                 <div class="container">
 
                     <div class="row" data-aos="zoom-in">
@@ -66,7 +66,7 @@
                     </div>
 
                 </div>
-            </section><!-- End Cliens Section -->
+            </section!--><!-- End Cliens Section -->
 
             <!-- ======= About Us Section ======= -->
             <section id="about" class="about section-bg">
