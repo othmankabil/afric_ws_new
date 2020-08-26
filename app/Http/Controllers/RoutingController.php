@@ -7,6 +7,7 @@ use App\services\productDetailService;
 use App\services\ProductService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
+use Symfony\Component\Console\Input\Input;
 
 class RoutingController extends Controller
 {
@@ -45,11 +46,11 @@ class RoutingController extends Controller
         return view('productDetail')->with('product',$product);
     }
 
-    public function products()
+    public function products($n = 10)
     {
         self::$active ='products';
         $motherlessCats = CategorieService::getMotherlessCategories();
-        $allProducts = ProductService::getAlProducts();
+        $allProducts = ProductService::getAlProducts($n);
         return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts]);
     }
 }

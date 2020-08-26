@@ -24,33 +24,15 @@
                 <div class="empty-space col-xs-b35 col-md-b70"></div>
 
                 <div class="align-inline spacing-1">
-                    <div class="h4">Sport gadgets</div>
+                    <div class="h4">Produits</div>
                 </div>
-                <div class="align-inline spacing-1">
-                    <div class="simple-article size-1">SHOWING <b class="grey">15</b> OF <b class="grey">2 358</b> RESULTS</div>
-                </div>
+
                 <div class="align-inline spacing-1 hidden-xs">
                     <a class="pagination toggle-products-view active"><img src="img/icon-14.png" alt="" /><img src="img/icon-15.png" alt="" /></a>
                     <a class="pagination toggle-products-view"><img src="img/icon-16.png" alt="" /><img src="img/icon-17.png" alt="" /></a>
                 </div>
-                <div class="align-inline spacing-1 filtration-cell-width-1">
-                    <select class="SlectBox small">
-                        <option disabled="disabled" selected="selected">Most popular products</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select>
-                </div>
-                <div class="align-inline spacing-1 filtration-cell-width-2">
-                    <select class="SlectBox small">
-                        <option disabled="disabled" selected="selected">Show 30</option>
-                        <option value="volvo">30</option>
-                        <option value="saab">50</option>
-                        <option value="mercedes">100</option>
-                        <option value="audi">200</option>
-                    </select>
-                </div>
+
+
 
 
                 <div class="empty-space col-xs-b25 col-sm-b60"></div>
@@ -62,14 +44,13 @@
                             <div class="col-sm-4">
                                 <div class="product-shortcode style-1">
                                     <div class="title">
-                                        <div class="simple-article size-1 color col-xs-b5"><a href="#">SMART PHONES</a></div>
-                                        <div class="h6 animate-to-green"><a href="#">Smartphone vibe x2</a></div>
+                                        <div class="simple-article size-1 color col-xs-b5"><a href="#">{{\App\services\ProductService::getFirstCategorieLabel($product)}}</a></div>
                                     </div>
                                     <div class="preview">
                                         <img src="{{asset(\App\services\ProductService::getSingleImage($product->ref))}}" alt="">
                                         <div class="preview-buttons valign-middle">
                                             <div class="valign-middle-content">
-                                                <a class="button size-2 style-2" href="#">
+                                                <a class="button size-2 style-2" href="productDetail/{{$product->rowid}}">
                                                         <span class="button-wrapper">
                                                             <span class="icon"><img src="img/icon-1.png" alt=""></span>
                                                             <span class="text">Learn More</span>
@@ -78,7 +59,7 @@
                                                 <a class="button size-2 style-3" href="#">
                                                         <span class="button-wrapper">
                                                             <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">Add To Cart</span>
+                                                            <span class="text">learn more</span>
                                                         </span>
                                                 </a>
                                             </div>
@@ -124,7 +105,7 @@
                             <span class="pagination">...</span>
                             @if($allProducts->lastPage()>=2)
                             @for ($i = $allProducts->currentPage(); $i < $allProducts->currentPage()+5; $i++)
-                                    @break($i>$allProducts->total())
+                                    @break($i>$allProducts->lastPage())
                                 <a class="pagination {{ $i==$allProducts->currentPage()?'active':'' }}" href="{{$allProducts->url($i)}}">{{$i}}</a>
                             @endfor
                             @endif
@@ -159,19 +140,19 @@
                 <ul class="categories-menu transparent">
                     @foreach($categories as $categorie)
                         <li >
-                            <a href="#">{{$categorie->label}}</a>
+                            <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$categorie->rowid])}}">{{$categorie->label}}</a>
                             @if(\App\services\CategorieService::getCategorieSubs($categorie->rowid)!=null)
                                 <div class="toggle"></div>
                             @foreach(\App\services\CategorieService::getCategorieSubs($categorie->rowid) as $subCategorie)
                                     <ul>
                                         <li>
-                                            <a href="#">{{$subCategorie->label}}</a>
+                                            <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$subCategorie->rowid])}}">{{$subCategorie->label}}</a>
                                             @if(\App\services\CategorieService::getCategorieSubs($subCategorie->rowid)!=null)
                                                 <div class="toggle"></div>
                                                 @foreach(\App\services\CategorieService::getCategorieSubs($subCategorie->rowid) as $subsubCategorie)
                                                     <ul>
                                                         <li>
-                                                            <a href="#">{{$subsubCategorie->label}}</a>
+                                                            <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$subsubCategorie->rowid])}}">{{$subsubCategorie->label}}</a>
                                                         </li>
                                                     </ul>
                                                 @endforeach
