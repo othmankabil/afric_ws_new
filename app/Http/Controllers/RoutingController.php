@@ -8,6 +8,8 @@ use App\services\ProductService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Symfony\Component\Console\Input\Input;
+use Illuminate\Support\Facades\Mail;
+
 
 class RoutingController extends Controller
 {
@@ -52,5 +54,17 @@ class RoutingController extends Controller
         $motherlessCats = CategorieService::getMotherlessCategories();
         $allProducts = ProductService::getAlProducts($n);
         return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts]);
+    }
+    public function  sendMail(Request   $request)
+    {
+       // print_r($request->input("client_first_name"));
+        $to_name = $request->input("client_first_name")." ".$request->input("client_last_name");
+        $to_email = $request->input("client_email");
+        $info = array("name"=>$to_name, "body"=>"");
+        Mail::send('sendMail', $info, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                ->subject('Afric Domotique Devis');
+            $message->from('marketing@afric-domotique.ma','Afric Domotique');
+        });
     }
 }

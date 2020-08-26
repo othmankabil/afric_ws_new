@@ -43,13 +43,19 @@
                                     <div class="simple-article size-3 col-xs-b5">REFERENCE PRODUIT.: <span class="grey">{{$product->ref}}</span></div>
                                 </div>
                             </div>
-                            <div class="simple-article size-3 col-xs-b30">Ce produit offre des fonctionnalités de pointe pour maximiser la personnalisation de votre réseau, tout en étant optimisées pour fonctionner ensemble de manière transparente. Pour plus d'information veuillez demander de devis.</div>
+                            <div class="simple-article size-3 col-xs-b15">Ce produit offre des fonctionnalités de pointe pour maximiser la personnalisation de votre réseau, tout en étant optimisées pour fonctionner ensemble de manière transparente. Pour plus d'information veuillez demander de devis.</div>
 
+                            <a class="button size-2 style-6 block col-xs-b15">
+                                        <span class="button-wrapper">
+                                            <span class="icon"><img src="img/icon-datasheet.png" alt=""></span>
+                                            <span class="text">Fiche technique du produit</span>
+                                        </span>
+                            </a>
                             <div class="row m5 col-xs-b40">
                                 <div class="col-sm-6 col-xs-b10 col-sm-b0">
                                     <a class="button size-2 style-2 block open-popup" data-rel="5">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="img/icon-2.png" alt=""></span>
+                                            <span class="icon"><img src="img/icon-devis.png" alt=""></span>
                                             <span class="text">Demande Devis</span>
                                         </span>
                                     </a>
@@ -57,7 +63,7 @@
                                 <div class="col-sm-6">
                                     <a class="button size-2 style-1 block noshadow" href="#">
                                     <span class="button-wrapper">
-                                        <span class="icon"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+                                        <span class="icon"><img src="img/icon-favoris.png" alt=""></span>
                                         <span class="text">add to favourites</span>
 
                                     </span>
@@ -327,17 +333,17 @@
             <div class="popup-container size-1">
                 <div class="popup-align">
                     <h3 class="h3 text-center">Demande Devis</h3>
-                    <form id="formDemande" >
+                    <form id="formDemande"  action="{{\Illuminate\Support\Facades\URL::to('/saveDevis')}}" method="post">
                     <div class="empty-space col-xs-b30"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Nom" required />
+                    <input class="simple-input" type="text"  value="" name="client_first_name" placeholder="Nom" required />
                     <div class="empty-space col-xs-b10 col-sm-b10"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Prénom" required/>
+                    <input class="simple-input" type="text" value="" name="client_last_name" placeholder="Prénom" required/>
                     <div class="empty-space col-xs-b10 col-sm-b10"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Email" required/>
+                    <input class="simple-input" type="text" value="" name="client_email" placeholder="Email" required/>
                     <div class="empty-space col-xs-b10 col-sm-b10"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Numéro de téléphone" required/>
+                    <input class="simple-input" type="text" value="" name="client_phone" placeholder="Numéro de téléphone" required/>
                      <div class="empty-space col-xs-b10 col-sm-b10"></div>
-                     <input class="simple-input" type="text" value="" placeholder="Adresse"/>
+                     <input class="simple-input" type="text" value="" name="client_adresse" placeholder="Adresse"/>
 
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
                     <div class="row">
