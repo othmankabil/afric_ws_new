@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-md-8 col-md-text-right">
                         <div class="entry hidden-xs hidden-sm"><b>Nous contacter:</b> <a
-                                href="tel:+35235551238745">(+212) 522 686 834</a></div>
+                                href="tel:+212522686834">(+212) 522 686 834</a></div>
                         <div class="entry hidden-xs hidden-sm"><b>email:</b> <a
                                 href="mailto:contact@afric-domotique.ma">contact@afric-domotique.ma</a></div>
                         <div class="entry"><a class="open-popup" data-rel="1"><b>s'identifier</b></a>&nbsp; ou &nbsp;<a

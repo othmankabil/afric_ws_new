@@ -12,4 +12,6 @@ Route::get('/productDetail/{rowid}',"RoutingController@productDetail");
 Route::get('products',"RoutingController@products");
 Route::get('categorie/{rowid}',"products_categoriesController@Categorie_products");
 
+Route::get('/sendMail',"RoutingController@sendMail");
+Route::post('/saveDevis',"RoutingController@sendMail");
 

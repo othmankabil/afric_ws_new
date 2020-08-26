@@ -339,7 +339,7 @@ body.mobile .swiper-container.page-height .swiper-pagination {
 	margin: 0 auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 10px;
-	
+
 }
 
 @media (min-width: 992px) {
@@ -1072,6 +1072,10 @@ body.mobile .fixed-background {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
+.button.style-6 {
+    background: #1c6e88;
+    color: #fff;
+}
 
 .button.facebook-button {
 	background: #3b5998;
@@ -1414,7 +1418,7 @@ textarea.simple-input {
 
 .simple-input.light {
 	border-color:#ff7c4d;
-	
+
 }
 
 .simple-input.light:focus {
@@ -4010,7 +4014,7 @@ span.pagination {
 .product-shortcode.style-1 {
 	border: 1px #f7f7f7 solid;
 	padding: 25px 30px 5px 30px;
-	
+
 	overflow: hidden;
 }
 
@@ -7033,12 +7037,12 @@ section {
 # Footer
 --------------------------------------------------------------*/
 .footer-form-block {
-	background: #f3f5fa; 
+	background: #f3f5fa;
     padding: 20px 0;
 }
 .footer-form-block h4{
 	font-size: 24px;
-	
+
 	padding: 0;
 	line-height: 1;
 	font-weight: 600;
@@ -7048,7 +7052,7 @@ section {
 	font-size: 14px;
 	background: #37517e;
   }
-  
+
   #footer .footer-newsletter {
 	padding: 50px 0;
 	background: #f3f5fa;
@@ -7056,7 +7060,7 @@ section {
 	font-size: 15px;
 	color: #444444;
   }
-  
+
   #footer .footer-newsletter h4 {
 	font-size: 24px;
 	margin: 0 0 20px 0;
@@ -7065,7 +7069,7 @@ section {
 	font-weight: 600;
 	color: #37517e;
   }
-  
+
   #footer .footer-newsletter form {
 	margin-top: 30px;
 	background: #fff;
@@ -7075,13 +7079,13 @@ section {
 	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
 	text-align: left;
   }
-  
+
   #footer .footer-newsletter form input[type="email"] {
 	border: 0;
 	padding: 4px 8px;
 	width: calc(100% - 100px);
   }
-  
+
   #footer .footer-newsletter form input[type="submit"] {
 	position: absolute;
 	top: 0;
@@ -7097,20 +7101,20 @@ section {
 	border-radius: 50px;
 	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   }
-  
+
   #footer .footer-newsletter form input[type="submit"]:hover {
 	background: #209dd8;
   }
-  
+
   #footer .footer-top {
 	padding: 60px 0 30px 0;
 	background: #fff;
   }
-  
+
   #footer .footer-top .footer-contact {
 	margin-bottom: 30px;
   }
-  
+
   #footer .footer-top .footer-contact h3 {
 	font-size: 28px;
 	margin: 0 0 10px 0;
@@ -7120,7 +7124,7 @@ section {
 	font-weight: 600;
 	color: #37517e;
   }
-  
+
   #footer .footer-top .footer-contact p {
 	font-size: 14px;
 	line-height: 24px;
@@ -7128,7 +7132,7 @@ section {
 	font-family: "Jost", sans-serif;
 	color: #5e5e5e;
   }
-  
+
   #footer .footer-top h4 {
 	font-size: 16px;
 	font-weight: bold;
@@ -7136,46 +7140,46 @@ section {
 	position: relative;
 	padding-bottom: 12px;
   }
-  
+
   #footer .footer-top .footer-links {
 	margin-bottom: 30px;
   }
-  
+
   #footer .footer-top .footer-links ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
   }
-  
+
   #footer .footer-top .footer-links ul i {
 	padding-right: 2px;
 	color: #ff7c4d;
 	font-size: 18px;
 	line-height: 1;
   }
-  
+
   #footer .footer-top .footer-links ul li {
 	padding: 10px 0;
 	display: flex;
 	align-items: center;
   }
-  
+
   #footer .footer-top .footer-links ul li:first-child {
 	padding-top: 0;
   }
-  
+
   #footer .footer-top .footer-links ul a {
 	color: #777777;
 	transition: 0.3s;
 	display: inline-block;
 	line-height: 1;
   }
-  
+
   #footer .footer-top .footer-links ul a:hover {
 	text-decoration: none;
 	color: #ff7c4d;
   }
-  
+
   #footer .footer-top .social-links a {
 	font-size: 18px;
 	display: inline-block;
@@ -7190,32 +7194,32 @@ section {
 	height: 36px;
 	transition: 0.3s;
   }
-  
+
   #footer .footer-top .social-links a:hover {
 	background: #209dd8;
 	color: #fff;
 	text-decoration: none;
   }
-  
+
   #footer .footer-bottom {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	color: #fff;
   }
-  
+
   #footer .copyright {
 	float: left;
   }
-  
+
   #footer .credits {
 	float: right;
 	font-size: 13px;
   }
-  
+
   #footer .credits a {
 	transition: 0.3s;
   }
-  
+
   @media (max-width: 768px) {
 	#footer .footer-bottom {
 	  padding-top: 20px;
@@ -7229,4 +7233,3 @@ section {
 	  padding-top: 4px;
 	}
   }
-  
