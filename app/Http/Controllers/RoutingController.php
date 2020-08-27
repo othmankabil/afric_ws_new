@@ -53,7 +53,7 @@ class RoutingController extends Controller
         self::$active ='products';
         $motherlessCats = CategorieService::getMotherlessCategories();
         $allProducts = ProductService::getAlProducts($n);
-        return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts]);
+        return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts,'origin'=>'home']);
     }
     public function  sendMail(Request   $request)
     {

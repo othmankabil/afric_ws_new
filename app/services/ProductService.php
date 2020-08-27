@@ -63,22 +63,26 @@ class ProductService
             $image_row= llx_ecm_files::where('filepath','=','produit/'.$productRef)->skip(self::$skipValue)->first();
 
             //check if first row is an image
-            if(self::check_image($image_row->filename))
+            if($image_row!=null)
             {
-                $image_path = $image_row->filepath.'/'.$image_row->filename;
-                self::$skipValue=0;
-                return $image_path;
-            }
-            //if its not an image we skip it and retrieve the next value
-            else
-            {
-                if (self::$skipValue<$image_row_count)
+                if(self::check_image($image_row->filename))
                 {
-                    ++Self::$skipValue;
-                    return self::getSingleImage($productRef);
+                    $image_path = $image_row->filepath.'/'.$image_row->filename;
+                    self::$skipValue=0;
+                    return $image_path;
                 }
-                return $image_path;
+                //if its not an image we skip it and retrieve the next value
+                else
+                {
+                    if (self::$skipValue<$image_row_count)
+                    {
+                        ++Self::$skipValue;
+                        return self::getSingleImage($productRef);
+                    }
+                    return $image_path;
+                }
             }
+
         }
         return $image_path;
     }
@@ -94,23 +98,27 @@ class ProductService
             $image_row_count = llx_ecm_files::where('filepath','=','produit/'.$productRef)->count();
             $image_row= llx_ecm_files::where('filepath','=','produit/'.$productRef)->skip(self::$skipValue)->first();
 
-            //check if first row is an image
-            if(self::check_pdf($image_row->filename))
+            //check if first row is a pdf
+            if($image_row!=null)
             {
-                $image_path = $image_row->filepath.'/'.$image_row->filename;
-                self::$skipValue=0;
-                return $image_path;
-            }
-            //if its not an image we skip it and retrieve the next value
-            else
-            {
-                if (self::$skipValue<$image_row_count)
+                if(self::check_pdf($image_row->filename))
                 {
-                    ++Self::$skipValue;
-                    return self::getSingleImage($productRef);
+                    $image_path = $image_row->filepath.'/'.$image_row->filename;
+                    self::$skipValue=0;
+                    return $image_path;
                 }
-                return $image_path;
+                //if its not a pdf we skip it and retrieve the next value
+                else
+                {
+                    if (self::$skipValue<$image_row_count)
+                    {
+                        ++Self::$skipValue;
+                        return self::getSingleImage($productRef);
+                    }
+                    return $image_path;
+                }
             }
+
         }
         return $image_path;
     }
@@ -133,8 +141,22 @@ class ProductService
     //add
     public static function getProductsFromCategorie($rowid,$n)
     {
-        $categorie = llx_categorie::find($rowid);
-        return $categorie->llx_products()->paginate($n);
+        $categoriesubs = CategorieService::getCategorieSubs($rowid);
+        $mergedProductsCollection = collect();
+        if($categoriesubs != null)
+        {
+            foreach ($categoriesubs as $categoriesub)
+            {
+                $mergedProductsCollection = $mergedProductsCollection->concat($categoriesub->llx_products);
+            }
+            return $mergedProductsCollection->paginate($n);
+        }
+        else
+            {
+            $categorie = llx_categorie::find($rowid);
+            return $categorie->llx_products()->paginate($n);
+        }
+
     }
 
     }

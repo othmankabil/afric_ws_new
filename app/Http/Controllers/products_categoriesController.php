@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 
 class products_categoriesController extends Controller
 {
-    public function Categorie_products($rowid,$n = 2)
+    public function Categorie_products($rowid,$n = 5)
     {
         RoutingController::$active='products';
-        $motherlessCats = CategorieService::getMotherlessCategories();
+        $motherCategorie = llx_categorie::find($rowid);
+        $subCategories = CategorieService::getCategorieSubs($rowid);
         $allProducts = ProductService::getProductsFromCategorie($rowid,$n);
-        return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts]);
+        return view('products',['mother'=>$motherCategorie,'subCategories'=>$subCategories,'allProducts'=>$allProducts,'origin'=>'cat']);
     }
 }
