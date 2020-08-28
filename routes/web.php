@@ -10,6 +10,8 @@ Route::get('contact',"RoutingController@contact");
 
 Route::get('/productDetail/{rowid}',"RoutingController@productDetail");
 Route::get('products',"RoutingController@products");
+Route::post('products',"products_categoriesController@SearchQuery");
+
 Route::get('categorie/{rowid}',"products_categoriesController@Categorie_products");
 
 Route::get('/sendMail',"RoutingController@sendMail");

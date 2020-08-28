@@ -158,5 +158,12 @@ class ProductService
         }
 
     }
+    public static function newProductsHomePage()
+    {
+        $productsByDate = llx_product::orderBy('datec','desc')->take(6)->get();
+        if(!$productsByDate->isEmpty())
+            return $productsByDate;
+        return null;
+    }
 
     }

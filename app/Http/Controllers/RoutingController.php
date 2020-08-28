@@ -48,8 +48,9 @@ class RoutingController extends Controller
         return view('productDetail')->with('product',$product);
     }
 
-    public function products($n = 10)
+    public function products($n = 9)
     {
+
         self::$active ='products';
         $motherlessCats = CategorieService::getMotherlessCategories();
         $allProducts = ProductService::getAlProducts($n);

@@ -6,16 +6,21 @@
 <div id="content-block">
     <!-- HEADER -->
 
-
     <div class="header-empty-space"></div>
 
     <div class="container">
         <div class="empty-space col-xs-b15 col-sm-b30"></div>
         <div class="breadcrumbs">
-            <a href="#">home</a>
-            <a href="#">accessories</a>
-            <a href="#">gadgets</a>
-            <a href="#">sport gadgets</a>
+            <a href="/">home</a>
+            <a href="/products?page=1">Produits</a>
+            @if($origin == 'cat')
+            @if($catParent != null)
+            <a href="#">{{$catParent->label}}</a>
+            <a href="#">{{$mother->label}}</a>
+            @else
+                <a href="#">{{$mother->label}}</a>
+            @endif
+            @endif
         </div>
         <div class="empty-space col-xs-b35 col-md-b35"></div>
 
@@ -98,7 +103,13 @@
                         <div class="pagination-wrapper">
 
                             @if($allProducts->lastPage()>=2)
-                            @for ($i = $allProducts->currentPage(); $i < $allProducts->currentPage()+5; $i++)
+                                @if($allProducts->currentPage()-2>0)
+                                    <a class="pagination" href="{{$allProducts->url($allProducts->currentPage()-2)}}">{{$allProducts->currentPage()-2}}</a>
+                                @endif
+                                @if($allProducts->currentPage()-1>0)
+                                    <a class="pagination" href="{{$allProducts->url($allProducts->currentPage()-1)}}">{{$allProducts->currentPage()-1}}</a>
+                                @endif
+                            @for ($i = $allProducts->currentPage(); $i < $allProducts->currentPage()+3; $i++)
                                     @break($i>$allProducts->lastPage())
                                 <a class="pagination {{ $i==$allProducts->currentPage()?'active':'' }}" href="{{$allProducts->url($i)}}">{{$i}}</a>
                             @endfor
@@ -174,34 +185,7 @@
     <div class="empty-space col-md-b70"></div>
 
     <!-- FOOT   ER -->
-    <div class="footer-form-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-xs-b10 col-lg-b0">
-                    <div class="cell-view empty-space col-lg-b50">
-                        <h3 class="h3 light">dont miss your chance</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-xs-b10 col-lg-b0">
-                    <div class="cell-view empty-space col-lg-b50">
-                        <div class="simple-article size-3 light transparent">ONLY 200 PROMO CODES ON DISCOUNT!</div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-line-form">
-                        <input class="simple-input light" type="text" value="" placeholder="Your email">
-                        <div class="button size-2 style-1">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                    <span class="text">submit</span>
-                                </span>
-                            <input type="submit" value="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 </div>
