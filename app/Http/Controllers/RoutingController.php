@@ -24,6 +24,7 @@ class RoutingController extends Controller
         return view('index');
     }
 
+
     public function aboutUs()
     {
         self::$active ='aboutUs';
@@ -41,7 +42,11 @@ class RoutingController extends Controller
         self::$active ='contact';
         return view('contact');
     }
-
+    public function domotique()
+    {
+        self::$active ='domotique';
+        return view('domotique');
+    }
     public function productDetail($rowid)
     {
         self::$active ='index';
@@ -124,5 +129,27 @@ class RoutingController extends Controller
         Session::put('flash_message_status', $flash_message_status);
         return redirect("productDetail\\".$product_id);
 
+    }
+
+    public  function  contactSendMail(Request  $request)
+    {
+        $name= $request->input("name");
+        $email= $request->input("email");
+        $phone= $request->input("phone");
+        $subject=$request->input("subject");
+        $contact_message=$request->input("message");
+        $Client_data=array("name"=>$name,
+            "email"=>$email,
+            "phone"=>$phone,
+            "subject"=>$subject,
+            "contact_message"=>$contact_message);
+      Config::set('mail.username', 'contact@afric-domotique.ma');
+        Config::set('mail.password', 'jusbdlmg@2');
+        $sendMailToContact=Mail::send('sendMailToContact', $Client_data, function($message) {
+             $message->to('contact@afric-domotique.ma',"Afric Domotique Contact")
+                 ->subject('Afric Domotique Contact');
+             $message->from('contact@afric-domotique.ma','Afric Domotique');
+         });
+        return redirect("contact");
     }
 }
