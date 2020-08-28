@@ -57,12 +57,13 @@ class RoutingController extends Controller
         return view('productDetail',['product'=>$product,'flash_statue'=>$flash_statue]);
     }
 
-    public function products($n = 10)
+    public function products($n = 9)
     {
+
         self::$active ='products';
         $motherlessCats = CategorieService::getMotherlessCategories();
         $allProducts = ProductService::getAlProducts($n);
-        return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts]);
+        return view('products',['categories'=>$motherlessCats,'allProducts'=>$allProducts,'origin'=>'home']);
     }
     public function  sendMail(Request $request)
     {

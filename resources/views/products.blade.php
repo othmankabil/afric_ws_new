@@ -6,22 +6,26 @@
 <div id="content-block">
     <!-- HEADER -->
 
-
     <div class="header-empty-space"></div>
 
     <div class="container">
         <div class="empty-space col-xs-b15 col-sm-b30"></div>
         <div class="breadcrumbs">
-            <a href="#">home</a>
-            <a href="#">accessories</a>
-            <a href="#">gadgets</a>
-            <a href="#">sport gadgets</a>
+            <a href="/">home</a>
+            <a href="/products?page=1">Produits</a>
+            @if($origin == 'cat')
+            @if($catParent != null)
+            <a href="#">{{$catParent->label}}</a>
+            <a href="#">{{$mother->label}}</a>
+            @else
+                <a href="#">{{$mother->label}}</a>
+            @endif
+            @endif
         </div>
-        <div class="empty-space col-xs-b35 col-md-b70"></div>
+        <div class="empty-space col-xs-b35 col-md-b35"></div>
+
         <div class="row">
             <div class="col-md-9 col-md-push-3">
-
-                <div class="empty-space col-xs-b35 col-md-b70"></div>
 
                 <div class="align-inline spacing-1">
                     <div class="h4">Produits</div>
@@ -32,10 +36,6 @@
                     <a class="pagination toggle-products-view"><img src="img/icon-16.png" alt="" /><img src="img/icon-17.png" alt="" /></a>
                 </div>
 
-
-
-
-                <div class="empty-space col-xs-b25 col-sm-b60"></div>
 
                 <div class="products-content">
                     <div class="products-wrapper">
@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col-sm-3 hidden-xs">
                         @if($allProducts->onFirstPage())
-                            <a class="button size-1 style-5" href="products?page=1">
+                            <a  class="button size-1 style-5"  style="pointer-events: none;color: #ccc;" href="products?page=1">
                                 <span class="button-wrapper">
                                     <span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
                                     <span class="text">previous page</span>
@@ -101,10 +101,15 @@
                     </div>
                     <div class="col-sm-6 text-center">
                         <div class="pagination-wrapper">
-                            <a class="pagination" href="products?page=1">1</a>
-                            <span class="pagination">...</span>
+
                             @if($allProducts->lastPage()>=2)
-                            @for ($i = $allProducts->currentPage(); $i < $allProducts->currentPage()+5; $i++)
+                                @if($allProducts->currentPage()-2>0)
+                                    <a class="pagination" href="{{$allProducts->url($allProducts->currentPage()-2)}}">{{$allProducts->currentPage()-2}}</a>
+                                @endif
+                                @if($allProducts->currentPage()-1>0)
+                                    <a class="pagination" href="{{$allProducts->url($allProducts->currentPage()-1)}}">{{$allProducts->currentPage()-1}}</a>
+                                @endif
+                            @for ($i = $allProducts->currentPage(); $i < $allProducts->currentPage()+3; $i++)
                                     @break($i>$allProducts->lastPage())
                                 <a class="pagination {{ $i==$allProducts->currentPage()?'active':'' }}" href="{{$allProducts->url($i)}}">{{$i}}</a>
                             @endfor
@@ -122,7 +127,7 @@
                                 </span>
                         </a>
                         @else
-                            <a class="button size-1 style-5" href="products?page={{$allProducts->lastPage()}}">
+                            <a class="button size-1 style-5" style="pointer-events: none;color: #ccc;" href="products?page={{$allProducts->lastPage()}}">
                                 <span class="button-wrapper">
                                     <span class="icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                                     <span class="text">next page</span>
@@ -135,44 +140,43 @@
                 <div class="empty-space col-xs-b35 col-md-b70"></div>
                 <div class="empty-space col-md-b70"></div>
             </div>
+            @if($origin == 'home')
             <div class="col-md-3 col-md-pull-9">
                 <div class="h4 col-xs-b10">categories</div>
                 <ul class="categories-menu transparent">
                     @foreach($categories as $categorie)
                         <li >
                             <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$categorie->rowid])}}">{{$categorie->label}}</a>
-                            @if(\App\services\CategorieService::getCategorieSubs($categorie->rowid)!=null)
-                                <div class="toggle"></div>
-                            @foreach(\App\services\CategorieService::getCategorieSubs($categorie->rowid) as $subCategorie)
-                                    <ul>
-                                        <li>
-                                            <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$subCategorie->rowid])}}">{{$subCategorie->label}}</a>
-                                            @if(\App\services\CategorieService::getCategorieSubs($subCategorie->rowid)!=null)
-                                                <div class="toggle"></div>
-                                                @foreach(\App\services\CategorieService::getCategorieSubs($subCategorie->rowid) as $subsubCategorie)
-                                                    <ul>
-                                                        <li>
-                                                            <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$subsubCategorie->rowid])}}">{{$subsubCategorie->label}}</a>
-                                                        </li>
-                                                    </ul>
-                                                @endforeach
-                                            @endif
-
-                                        </li>
-                                    </ul>
-                                @endforeach
-                            @endif
-
                         </li>
                     @endforeach
-
                 </ul>
-
-
                 <div class="empty-space col-xs-b25 col-sm-b50"></div>
-
-
             </div>
+            @else
+                <div class="col-md-3 col-md-pull-9">
+                    <div class="h4 col-xs-b10">categories</div>
+                    <ul class="categories-menu transparent">
+                        <a  class="button  size-1 style-5"   href="products?page=1">
+                                <span class="button-wrapper">
+                                    <span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                                    <span class="text">voir plus de catégories</span>
+                                </span>
+                        </a>
+                        <hr>
+                            <li >
+                                <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$mother->rowid])}}">{{$mother->label}}</a>
+                                @if($subCategories!=null)
+
+                                @foreach($subCategories as $subcat)
+                                    <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$subcat->rowid])}}" style="padding-left: 30px">{{$subcat->label}}</a>
+                                @endforeach
+                                @endif
+                            </li>
+
+                    </ul>
+                    <div class="empty-space col-xs-b25 col-sm-b50"></div>
+                </div>
+            @endif
         </div>
 
     </div>
@@ -181,34 +185,7 @@
     <div class="empty-space col-md-b70"></div>
 
     <!-- FOOT   ER -->
-    <div class="footer-form-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-xs-b10 col-lg-b0">
-                    <div class="cell-view empty-space col-lg-b50">
-                        <h3 class="h3 light">dont miss your chance</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-xs-b10 col-lg-b0">
-                    <div class="cell-view empty-space col-lg-b50">
-                        <div class="simple-article size-3 light transparent">ONLY 200 PROMO CODES ON DISCOUNT!</div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-line-form">
-                        <input class="simple-input light" type="text" value="" placeholder="Your email">
-                        <div class="button size-2 style-1">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                    <span class="text">submit</span>
-                                </span>
-                            <input type="submit" value="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 </div>
