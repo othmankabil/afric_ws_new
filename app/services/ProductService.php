@@ -7,6 +7,7 @@ namespace App\services;
 use App\llx_categorie;
 use App\llx_ecm_files;
 use App\llx_product;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use phpDocumentor\Reflection\Types\Self_;
 use PhpParser\Node\Stmt\Break_;
@@ -18,6 +19,14 @@ class ProductService
     {
         $imageExtensions = ['jpg', 'jpeg', 'gif', 'png', 'bmp', 'svg', 'svgz', 'cgm', 'djv', 'djvu', 'ico', 'ief','jpe', 'pbm', 'pgm', 'pnm', 'ppm', 'ras', 'rgb', 'tif', 'tiff', 'wbmp', 'xbm', 'xpm', 'xwd'];
         $explodeImage = explode('.', $image_url);
+        $extension = end($explodeImage);
+        //returns true if file given is an image
+        return (in_array($extension, $imageExtensions));
+    }
+    public static function check_pdf($file_url)
+    {
+        $imageExtensions = ['pdf'];
+        $explodeImage = explode('.', $file_url);
         $extension = end($explodeImage);
         //returns true if file given is an image
         return (in_array($extension, $imageExtensions));
@@ -53,7 +62,6 @@ class ProductService
         {
             $image_row_count = llx_ecm_files::where('filepath','=','produit/'.$productRef)->count();
             $image_row= llx_ecm_files::where('filepath','=','produit/'.$productRef)->skip(self::$skipValue)->first();
-
             //check if first row is an image
             if(self::check_image($image_row->filename))
             {
@@ -68,6 +76,39 @@ class ProductService
                 {
                     ++Self::$skipValue;
                     return self::getSingleImage($productRef);
+                }
+                return $image_path;
+            }
+        }
+        return $image_path;
+    }
+    public static function getSinglePdf($productRef)
+    {
+        $image_path = null;
+
+        //check if directory with name of product reference exist in 'produit'
+        $exist = Storage::disk('images_url')->exists($productRef);
+
+        if ($exist)
+        {
+            $image_row_count = llx_ecm_files::where('filepath','=','produit/'.$productRef)->count();
+            $image_row= llx_ecm_files::where('filepath','=','produit/'.$productRef)->skip(self::$skipValue)->first();
+
+            //check if first row is an image
+            if(self::check_pdf($image_row->filename))
+            {
+                $image_path = $image_row->filepath.'/'.$image_row->filename;
+                self::$skipValue=0;
+
+                return $image_path;
+            }
+            //if its not an image we skip it and retrieve the next value
+            else
+            {
+                if (self::$skipValue<$image_row_count)
+                {
+                    ++Self::$skipValue;
+                    return self::getSinglePdf($productRef);
                 }
                 return $image_path;
             }
