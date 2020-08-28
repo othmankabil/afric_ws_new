@@ -15,10 +15,10 @@
             <a href="/products?page=1">Produits</a>
             @if($origin == 'cat')
             @if($catParent != null)
-            <a href="#">{{$catParent->label}}</a>
-            <a href="#">{{$mother->label}}</a>
+            <a href="/categorie/{{$catParent->rowid}}">{{$catParent->label}}</a>
+            <a href="/categorie/{{$mother->rowid}}">{{$mother->label}}</a>
             @else
-                <a href="#">{{$mother->label}}</a>
+                <a href="/categorie/{{$mother->rowid}}">{{$mother->label}}</a>
             @endif
             @endif
         </div>
@@ -32,8 +32,7 @@
                 </div>
 
                 <div class="align-inline spacing-1 hidden-xs">
-                    <a class="pagination toggle-products-view active"><img src="img/icon-14.png" alt="" /><img src="img/icon-15.png" alt="" /></a>
-                    <a class="pagination toggle-products-view"><img src="img/icon-16.png" alt="" /><img src="img/icon-17.png" alt="" /></a>
+
                 </div>
 
 
@@ -41,32 +40,19 @@
                     <div class="products-wrapper">
                         <div class="row nopadding">
                             @foreach($allProducts as $product)
-                            <div class="col-sm-4">
+                            <div  class="col-sm-4">
                                 <div class="product-shortcode style-1">
                                     <div class="title">
-                                        <div class="simple-article size-1 color col-xs-b5"><a href="#">{{\App\services\ProductService::getFirstCategorieLabel($product)}}</a></div>
+                                        <div class="simple-article size-1 color col-xs-b5"><a href="{{action('products_categoriesController@Categorie_products',['rowid'=>\App\services\productDetailService::getProductFirstCategorie($product)->rowid])}}">{{\App\services\ProductService::getFirstCategorieLabel($product)}}</a></div>
                                     </div>
                                     <div class="preview">
-                                        <img src="{{asset(\App\services\ProductService::getSingleImage($product->ref))}}" alt="">
-                                        <div class="preview-buttons valign-middle">
-                                            <div class="valign-middle-content">
-                                                <a class="button size-2 style-2" href="productDetail/{{$product->rowid}}">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                            <span class="text">Learn More</span>
-                                                        </span>
-                                                </a>
-                                                <a class="button size-2 style-3" href="#">
-                                                        <span class="button-wrapper">
-                                                            <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                            <span class="text">learn more</span>
-                                                        </span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        <a href="productDetail/{{$product->rowid}}">
+                                            <img style="height: 185px;" src="{{asset(\App\services\ProductService::getSingleImage($product->ref))}}" alt="">
+                                        </a>
+
                                     </div>
                                     <div class="price align-content-center">
-                                        <div class="simple-article size-4">{{$product->label}}</div>
+                                        <div class="simple-article size-4"><a href="productDetail/{{$product->rowid}}">{{$product->label}}</a></div>
                                     </div>
 
                                 </div>

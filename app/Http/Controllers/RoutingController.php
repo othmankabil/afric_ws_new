@@ -44,7 +44,7 @@ class RoutingController extends Controller
 
     public function productDetail($rowid)
     {
-        self::$active ='index';
+
         $flash_statue=-1;
         if(Session::has('flash_message_status'))
         {
