@@ -1,45 +1,42 @@
+
 {
     "data": {
         "services_header": {
             "title": "NOS SERVICES"
         },
-        "services_data":[
+        "services_data": [{
+            "title": "FORMATION DE VOS ÉQUIPES.",
+            "image": "",
+            "description_1": "Avec l’évolution permanente des technologies employées, et l’innovation dont font preuve les marques leaders des Telecoms, il est absolument indispensable de former vos équipes dans la maitrise des processus de vente, d’installation et de maintenance.",
+            "description_2": "Nous disposons d'un stock sur site important de produits et d'une équipe logistique dynamique, à plein temps, pour réceptionner et envoyer les colis.Selon la typologie de vos équipes et les besoins que vous aurez identifiés, nous proposerons alors à nos « stagiaires » des formations adaptées à la réalité du terrain."
+        },
             {
-                "title":"UN STOCK PERMANENT",
-                "image":"",
-                "description_1":"Votre commande répond à un besoin immédiat qui ne peut attendre.",
-                "description_2":"Nous disposons d'un stock sur site important de produits et d'une équipe logistique dynamique, à plein temps, pour réceptionner et envoyer les colis."
+                "title": "CRM fiable, évolutive et sécurisée !",
+                "image": "",
+                "description_1": "Afric Domotique vous propose des solutions CRM ouvertes qui aide vos employés à établir un contact privilégié avec chaque client. Grâce à ces solution, votre entreprise, dans sa globalité, peut construire efficacement de meilleures relations clients pour assurer une satisfaction totale de ces derniers. Ce qui vous aidera à mieux vous différencier sur le marché et générer plus de chiffre d’affaires.",
+                "description_2": "Nos consultants configurent votre CRM selon vos besoins y compris avec le développement de fonctionnalités."
             },
             {
-                "title":"UN SERVICE DÉDIÉ AUX GRANDS COMPTES",
-                "image":"",
-                "description_1":"Pour les grands groupes, les besoins sont réguliers, répartis sur divers sites et souvent en grande quantité : les devis doivent donc être souples et adaptés.",
-                "description_2":"Notre service Grands Comptes vous fait bénéficier de services sur mesure : interlocuteur dédié, prix adaptés à votre volume d’achat, simplification des vos paiements, livraison multi-sites..."
+                "title": "Un service après vente Professionnel",
+                "image": "",
+                "description_1": "Si un produit devient défectueux, vous ne pouvez pas le retourner à l’aide de Vos Commandes.",
+                "description_2": "Vous pouvez visiter le site internet du fabricant ou le contacter directement, car il peut être en mesure d'offrir un dépannage et une assistance pour les problèmes que vous rencontrez.",
+                "description_3": "Vous pouvez également nous contacter.Si le produit est vendu par Afric Domotique, vous pouvez invoquer la garantie légale de conformité. Dans ce cas, si le fabricant n'est pas en mesure de résoudre votre problème ou si vous ne souhaitez pas contacter le fabricant,vous pouvez nous contacter."
             },
             {
-                "title":"UN ENGAGEMENT ÉCO-RESPONSABLE",
-                "image":"",
-                "description_1":"Nous participons activement au recyclage des produits électriques et électroniques, afin de réduire notre impact sur la planète.",
-                "description_2":"Grâce à nos partenariats, pour chaque produit reconditionné à neuf acheté, nous nous engageons à replanter un arbre sur le sol marocain !"
+                "title": "service commercial",
+                "image": "",
+                "description_1": "Si vous avez une demande de vente, recherchez les prix des produits ou si vous souhaitez devenir partenaire, remplissez ce formulaire de contact pour être mis en relation avec l'un de nos représentants commerciaux dès aujourd'hui.",
+                "description_2": "Notre force de vente est répartie dans le Maroc entièr pour vous apporter un service dédié et réactif. Présence, Performance, Réactivité et Compétence sont les maitres mots de notre organisation commerciale.",
+                "description_3": "Vous disposez chez Afric Domotique d’un interlocuteur commercial dédié comme point de contact unique pour promouvoir l’ensemble de nos offres de service. Nous entrons avec vous dans une vraie démarche partenaire. La relation est simple et efficace."
+
             },
             {
-                "title":"Un service après vente Professionnel",
-                "image":"",
-                "description_1":"Si un produit devient défectueux après ??? jours, vous ne pouvez pas le retourner à l’aide de Vos Commandes.",
-                "description_2":"Vous pouvez visiter le site internet du fabricant ou le contacter directement, car il peut être en mesure d'offrir un dépannage et une assistance pour les problèmes que vous rencontrez.",
-                "description_3":"Vous pouvez également nous contacter.Si le produit est vendu par Afric Domotique, vous pouvez invoquer la garantie légale de conformité. Dans ce cas, si le fabricant n'est pas en mesure de résoudre votre problème ou si vous ne souhaitez pas contacter le fabricant,vous pouvez nous contacter."
-            },
-            {
-                "title":"service commercial",
-                "image":"",
-                "description_1":"Si vous avez une demande de vente, recherchez les prix des produits ou si vous souhaitez devenir partenaire, remplissez ce formulaire de contact pour être mis en relation avec l'un de nos représentants commerciaux dès aujourd'hui."
-                
-            },
-            {
-                "title":"service technique",
-                "image":"",
-                "description_1":"Afric Domotique met à votre ordre une équipe pour Installer, assister et supporter ses consommateurs dans le but d’écouter et de satisfaire vos besoins.",
-                "description_2":"Notre support technique est là pour vous aider et répondre à vos interrogations le plus vite possible."
+                "title": "service technique",
+                "image": "",
+                "description_1": "Afric Domotique met à votre ordre une équipe pour Installer, assister et supporter ses consommateurs dans le but d’écouter et de satisfaire vos besoins.",
+                "description_2": "Notre support technique est là pour vous aider et répondre à vos interrogations le plus vite possible.",
+                "description_3": "L’équipe support Afric Domotique accompagne nos clients dans leur(s) projet(s) technique(s) en proposant des sessions de formations techniques. Nos clients ont également la possibilité d’accéder via un portail de téléchargement, à différents outils et fiches techniques régulièrement mis à jour par nos techniciens. Profitez de notre service technique expert, au service de vos commerciaux et techniciens."
             }
         ]
     }

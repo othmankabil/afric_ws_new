@@ -1,0 +1,78 @@
+{
+    "data": {
+        "session_aboutD": {
+            "saboutD_title": "COMPRENDRE LA DOMOTIQUE",
+            "saboutD_description_left": "Apprendre de manière très simple la domotique, et comprenez ce en quoi elle consiste.",
+            "saboutD_description_title_right1": "NOTRE HABITAT INTELLIGENT",
+            "saboutD_description_right1": ["Rassurer, prévenir, automatiser, surveiller, sécuriser et alerter, voici les six fonctions que vous offre l’habitat intelligent de Afric Domotique."],
+            "saboutD_description_title_right2": "SIMPLIFIEZ-VOUS LA VIE",
+            "saboutD_description_right2": ["La domotique vous permet de contrôler toutes les solutions intelligentes de votre habitat d’un seul et unique point de commande, elle apporte des solutions adaptées à vos besoins."],
+            "saboutD_description_title_right3": "ON VEILLE SUR VOUS",
+            "saboutD_description_right3": ["Scénarisez et adaptez votre habitat à votre quotidien, faites de votre entourage un endroit unique et intelligent. Tous les composants domotiques de l’habitat intelligent ont la capacité de communiquer ensemble pour vous offrir une expérience unique."],
+            "saboutD_description_title_right4": "LE LANGAGE",
+            "saboutD_description_right4": ["La domotique permet de programmer des appareils électriques comme les éclairages, le chauffage afin de les contrôler à distance ou localement pour les rendre intelligents."]
+        },
+        "session_features": {
+            "sfeatures_title": "CHOISIR LA DOMOTIQUE",
+            "sfeatures_description": "La domotique est une alliée en matière de confort, de sécurité, mais aussi de maintien à domicile des personnes dépendantes. Elle propose un large éventail de possibilités et même d’opportunités. Il est important de comprendre pourquoi et comment choisir ses objets connectés pour optimiser leurs apports.",
+
+            "sfeatures_title_right1": "Le Maintien à Domicile…",
+            "sfeatures_title_description_right1": "Le Maintien à domicile des personnes âgées est un sujet qui nous concerne tous.",
+            "sfeatures_description1": ["La domotique est une alternative permettant aux personnes âgées de prolonger leur maintien à domicile tout en gardant une certaine qualité de vie.",
+                " La domotique est une nouvelle perspective d’accompagnement des personnes âgées. C’est sécuriser le logement en facilitant les communications avec l’extérieur. La domotique participe au confort de la personne âgée chez elle et permet de rassurer les aidants familiaux.",
+                "Les personnes âgées préféreront pouvoir rester dans leur maison plutôt que d’aller en maison de retraite. C’est un gain de confort important. Le coût moyen d’une maison de retraite reste élevé contrairement à nos solutions innovantes.",
+                "Les systèmes domotiques apparaissent comme des solutions efficaces pour maintenir ces personnes à domicile, sécuriser leurs déplacements, prévenir les chutes et simplifier les gestes du quotidien : automatisation des volets roulants, détecteurs de mouvement qui déclenchent la lumière, installation de systèmes d’alertes..."
+            ],
+
+            "sfeatures_title_left": "La domotique, une source d'économies d'énregies (BIEN) RÉELLE",
+            "sfeatures_title_description_left": "La domotique a apporté de nombreuses solutions qui nous concerne tous.",
+            "sfeatures_description2": "Une maison domotique est aussi source d’économies d’énergie. Si elle est bien réalisée, une installation domotique peut vous permettre de réaliser d’importantes économies d’énergie (jusqu’à 30%) au sein de votre maison. Depuis 2013, les logements doivent être à basse consommation. Et en 2020, les bâtiments devront être à énergie positive selon la Réglementation Thermique c’est-à-dire qu’ils devront être totalement autonomes d’un point de vue énergétique (produire plus d’énergie qu’ils n’en consomment). Ils doivent donc devenir plus intelligents et communicants afin de réduire leur consommation. Ce qui passe par exemple par l’automatisation des volets roulants, du chauffage, la visualisation de la consommation électrique globale ou poste par poste, la mise en place de détecteurs d’ouvertures de fenêtres capables de couper le chauffage, la création de scénarios d’usages de vos systèmes (chauffage, éclairage…), la possibilité de baisser la température des pièces, de réguler pendant votre absence ou lancer certains équipements pendant les heures creuses…",
+
+            "sfeatures_title_right2": "La Sécurité Intelligente…",
+            "sfeatures_title_description_right2": "Tout le monde est concerné par la sécurité de son habitation.",
+            "sfeatures_description_right2": ["De la sécurisation de votre habitation à la sécurisation de grands établissements, la domotique vous propose ses solutions. On connaît déjà les caméras de surveillance ou détecteurs de mouvements pour sécuriser des habitats ou de plus gros bâtiments.",
+                "la domotique permet à ces objets de réagir pour alerter les personnes concernées. Les objets n’ont plus seulement une capacité de mémoire et d’observation mais ils peuvent agir selon un protocole prédéfinis.",
+                "Dans l'affaire actuelle, Afric Domotique a développé une solution pour accompagner ces démarches de sécurisation."
+            ]
+        },
+        "session_faq": {
+            "sfaq_title": "Questions-réponses",
+            "sfaq_label": [{
+                    "question": "Qu’est-ce que la domotique ?",
+                    "answer": "La domotique est la gestion intelligente de l’habitat par un ensemble d’objets interconnectés qui regroupe trois dimensions : la sécurité, le confort et le mieux vivre. Le pilotage de votre habitat est facile, de plus en plus intuitif selon vos habitudes, vos besoins, et vos envies. C’est le moyen de garder la main sur votre habitat à distance. ."
+                },
+                {
+                    "question": "Comment choisir un produit domotique ?",
+                    "answer": "Le choix de votre produit domotique dépend essentiellement de vos besoins mais surtout des produits que vous possédez déjà."
+                },
+                {
+                    "question": "Comment économiser de l’énergie au sein de mon habitat ?",
+                    "answer": "Afin d’économiser de l’énergie au sein de votre habitat, la domotique met à votre disposition des produits tels que : des capteurs de consommation électrique, des prises intelligentes ou encore des capteurs de température. Ces derniers vous permettent de faire des économies d’énergie mais également des économies financières."
+                },
+                {
+                    "question": "Comment contrôler mon habitat ?",
+                    "answer": "Afin de contrôler votre habitat, la domotique met à votre disposition des produits tels que : des ampoules connectées et des boutons de commande à distance. Ces derniers vous permettent d’automatiser les tâches du quotidien mais aussi de le contrôler à distance."
+                },
+                {
+                    "question": "Comment sécuriser mon habitat ?",
+                    "answer": "Afin de sécuriser votre habitat, la domotique met à votre disposition des produits tels que : des boutons d’alerte, des caméras ou des capteurs infrarouges. Ces derniers vous permettent de vivre en toute sérénité au sein de votre habitat et même durant vos absences."
+                },
+                {
+                    "question": "Les produits domotiques peuvent-ils être placés dehors ?",
+                    "answer": "Cela dépend des produits. Vous devez vérifier son étanchéité dans l’onglet caractéristiques du produit."
+                },
+                {
+                    "question": "Quelles sont les solutions pour sécuriser une personne âgée après une chute ou une hospitalisation ?",
+                    "answer": "Après une chute ou une hospitalisation, des signes de dépendance peuvent apparaître. Pour remédier à cela, nous vous proposons des solutions domotique afin de sécuriser l’habitat et de prévenir les chutes ou éventuels incidents pouvant survenir au quotidien."
+                },
+                {
+                    "question": "Dois-je posséder une centrale domotique pour acheter un produit ?",
+                    "answer": "Tout dépend du protocole du produit, ceux fonctionnant en bluetooth ou wifi peuvent fonctionner sans centrale domotique. Tous les autres produits ont besoin d’une centrale domotique parlant le même protocole."
+                }
+
+
+
+            ]
+        }
+    }
+}
