@@ -8,12 +8,17 @@
         <div class="container">
             <div class="empty-space col-xs-b15 col-sm-b30"></div>
             <div class="breadcrumbs">
-                <a href="#">home</a>
-                <a href="#">accessories</a>
-                <a href="#">gadgets</a>
-                <a href="#">sport gadgets</a>
+                <a href="/">home</a>
+                <a href="/products?page=1">Produits</a>
+                    @if(\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product)) !=null)
+                        <a href="categorie/{{\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product))->rowid}}">{{\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product))->label}}</a>
+                        <a href="categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{\App\services\productDetailService::getProductFirstCategorie($product)->label}}</a>
+                @else
+                    <a href="categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{AppservicesproductDetailService::getProductFirstCategorie($product)->label}}</a>
+                @endif
             </div>
-            <div class="empty-space col-xs-b15 col-sm-b5"></div>
+            <div class="empty-space col-xs-b25 col-sm-b50"></div>
+
 
             <div class="row">
                 <div class="col-md-9 col-md-push-3">
@@ -52,7 +57,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="simple-article size-3 grey col-xs-b5">SMART WATCHES</div>
+                            <div class="simple-article size-3 grey col-xs-b5">{{\App\services\ProductService::getFirstCategorieLabel($product)}}</div>
                             <div class="h4 col-xs-b25">{{$product->label}}</div>
 
                             <div class="row">
@@ -130,224 +135,87 @@
                         <div class="tab-entry">
                             <div class="empty-space col-xs-b5"></div>
                             <div class="empty-space col-xs-b20"></div>
-                            <div class="simple-article size-2">{$product->note}}</div>
+                            <div class="simple-article size-2">{{$product->note}}</div>
                             <div class="empty-space col-xs-b25"></div>
 
                         </div>
                     </div>
-                    <div class="empty-space col-md-b70"></div>
 
-                </div>
 
             </div>
-            <div class="empty-space col-md-b70"></div>
-            <div class="swiper-container arrows-align-top" data-breakpoints="1" data-xs-slides="1" data-sm-slides="3" data-md-slides="4" data-lt-slides="4" data-slides-per-view="5">
-                <div class="h4 swiper-title">Produits apparentés </div>
-                <div class="empty-space col-xs-b20"></div>
-                <div class="swiper-button-prev style-1"></div>
-                <div class="swiper-button-next style-1"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-49.jpg" alt="">
-
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                                <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-50.jpg" alt="">
-                                <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
-                                        <a class="button size-2 style-2" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                <span class="text">Learn More</span>
-                                            </span>
-                                        </a>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                                <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-51.jpg" alt="">
-                                <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
-                                        <a class="button size-2 style-2" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                <span class="text">Learn More</span>
-                                            </span>
-                                        </a>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                                <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-52.jpg" alt="">
-                                <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
-                                        <a class="button size-2 style-2" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                <span class="text">Learn More</span>
-                                            </span>
-                                        </a>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                                <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-53.jpg" alt="">
-                                <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
-                                        <a class="button size-2 style-2" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                <span class="text">Learn More</span>
-                                            </span>
-                                        </a>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                                <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-54.jpg" alt="">
-                                <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
-                                        <a class="button size-2 style-2" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                <span class="text">Learn More</span>
-                                            </span>
-                                        </a>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="product-shortcode style-1 small">
-                            <div class="title">
-                                <div class="simple-article size-1 color col-xs-b5"><a href="#">ACCESSORIES</a></div>
-                                <div class="h6 animate-to-green"><a href="#">usb watch charger</a></div>
-                            </div>
-                            <div class="preview">
-                                <img src="img/product-55.jpg" alt="">
-                                <div class="preview-buttons valign-middle">
-                                    <div class="valign-middle-content">
-                                        <a class="button size-2 style-2" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-1.png" alt=""></span>
-                                                <span class="text">Learn More</span>
-                                            </span>
-                                        </a>
-                                        <a class="button size-2 style-3" href="#">
-                                            <span class="button-wrapper">
-                                                <span class="icon"><img src="img/icon-3.png" alt=""></span>
-                                                <span class="text">Add To Cart</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="price">
-                                <div class="simple-article size-4 dark">$630.00</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-3 col-md-pull-9">
+                    <div class="h4 col-xs-b10">categories</div>
+                    <ul class="categories-menu transparent">
+                        @foreach(\App\services\CategorieService::getMotherlessCategories() as $categorie)
+                            <li >
+                                <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$categorie->rowid])}}">{{$categorie->label}}</a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
-                <div class="swiper-pagination relative-pagination visible-xs"></div>
-            </div>
+
+
+
 
 
         </div>
     </div>
+        <section id="produit" class="produit ">
+
+                <div class="h4 swiper-title ml-5">PRODUITS APPARENTES</div>
+
+            <div class="container">
+                <div class="slider-wrapper hidden-pixel-y">
+                    <div class="swiper-button-prev hidden"></div>
+                    <div class="swiper-button-next hidden"></div>
+                    <div class="swiper-container" data-breakpoints="1" data-xs-slides="1" data-sm-slides="2"
+                         data-md-slides="2" data-lt-slides="4" data-slides-per-view="4">
+                        <div class="swiper-wrapper">
+                            @foreach(\App\services\productDetailService::getRelatedProducts($product) as $product)
+                                <div class="swiper-slide" >
+                                    <div class="product-shortcode style-5 " >
+                                        <div class="product-label green"><a href="/categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{\App\services\productDetailService::getProductFirstCategorie($product)->label}}</a></div>
+                                        <div class="preview" style="margin-bottom: 10px;padding: 10px">
+                                            <div class="swiper-container" data-loop="1" data-touch="0">
+                                                <div class="swiper-button-prev style-1"></div>
+                                                <div class="swiper-button-next style-1"></div>
+                                                <div class="swiper-wrapper" >
+                                                    @foreach(\App\services\ProductService::getimages($product->ref) as $image)
+                                                        <div class="swiper-slide">
+                                                            <img style="height: 185px" src="{{asset($image)}}" alt="no image found" />
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bord" style="margin-bottom: 10px">
+                                            <div class="title">
+                                                <div class="h6"><a href="productDetail/{{$product->rowid}}" >{{$product->ref}}</a></div>
+                                            </div>
+                                            <div class="description">
+                                                <div class="simple-article text size-2">{{$product->label}}</div>
+                                            </div>
+
+                                        </div>
+                                        <div class="preview-buttons">
+                                            <div class="buttons-wrapper">
+                                                <a class="button size-1 style-3" href="productDetail/{{$product->rowid}}">
+                                                    <span class="button-wrapper">
+                                                        <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                        <span class="text">Details</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-pagination relative-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <div class="popup-wrapper">
         <div class="bg-layer"></div>
 

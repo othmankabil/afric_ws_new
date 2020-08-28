@@ -148,7 +148,7 @@
             <!-- ======= Produit Section ======= -->
             <section id="produit" class="produit ">
                 <div class="section-title">
-                    <h2>Nouvelles Produits </h2>
+                    <h2>Nouveaux produits</h2>
                 </div>
                 <div class="container">
                     <div class="slider-wrapper hidden-pixel-y">
@@ -160,7 +160,7 @@
                                 @foreach(\App\services\ProductService::newProductsHomePage() as $product)
                                 <div class="swiper-slide" >
                                     <div class="product-shortcode style-5 " >
-                                        <div class="product-label green">Fresh Stock</div>
+                                        <div class="product-label green">nouveau produit</div>
                                         <div class="preview" style="margin-bottom: 10px;padding: 10px">
                                             <div class="swiper-container" data-loop="1" data-touch="0">
                                                 <div class="swiper-button-prev style-1"></div>
@@ -185,7 +185,7 @@
                                         </div>
                                         <div class="preview-buttons">
                                             <div class="buttons-wrapper">
-                                                <a class="button size-1 style-3" href="#">
+                                                <a class="button size-1 style-3" href="productDetail/{{$product->rowid}}">
                                                     <span class="button-wrapper">
                                                         <span class="icon"><img src="img/icon-1.png" alt=""></span>
                                                         <span class="text">Details</span>
