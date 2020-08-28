@@ -14,7 +14,7 @@
             <h2 id="service_title">Nous Contacter</h2>
 
         </div>
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="icon-description-shortcode style-1">
@@ -57,45 +57,33 @@
             </div>
         </div>
         <div class="empty-space col-xs-b25 col-sm-b50"></div>
-
-        <div class="container">
-            <div class="map-wrapper">
-                <div id="map-canvas" class="full-width" data-lat="34.0151244" data-lng="-118.4729871" data-zoom="14">
-                </div>
-            </div>
-            <div class="addresses-block hidden">
-                <a class="marker" data-lat="34.0151244" data-lng="-118.4729871"
-                    data-string="1. Here is some address or email or phone or something else..."></a>
-            </div>
-        </div>
-        <div class="empty-space col-xs-b25 col-sm-b50"></div>
-        <div class="container">
-            <h4 class="h4 text-center col-xs-b25">have a questions?</h4>
+        <section class="section-bg">
+            <h4 class="h4 text-center col-xs-b25">VOUS AVEZ DES QUESTIONS?</h4>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <form class="contact-form">
                         <div class="row m5">
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Name" name="name" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Nom" name="name" />
                             </div>
                             <div class="col-sm-6">
                                 <input class="simple-input col-xs-b20" type="text" value="" placeholder="Email" name="email" />
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Phone" name="phone" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Téléphone" name="phone" />
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Subject" name="subject" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Sujet" name="subject" />
                             </div>
                             <div class="col-sm-12">
-                                <textarea class="simple-input col-xs-b20" placeholder="Your message" name="message"></textarea>
+                                <textarea class="simple-input col-xs-b20" placeholder="Votre message" name="section-bg"></textarea>
                             </div>
                             <div class="col-sm-12">
                                 <div class="text-center">
                                     <div class="button size-2 style-3">
                                         <span class="button-wrapper">
                                             <span class="icon"><img src="img/icon-4.png" alt=""></span>
-                                            <span class="text">send message</span>
+                                            <span class="text">envoyer message</span>
                                         </span>
                                         <input type="submit"/>
                                     </div>
@@ -105,7 +93,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
 
     </div>
 
@@ -119,4 +107,4 @@ $(document).ready(function() {
         });
 });
 </script>
-    @endsection
+@endsection
