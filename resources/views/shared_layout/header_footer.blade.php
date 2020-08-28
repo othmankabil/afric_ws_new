@@ -108,15 +108,33 @@
                                 </div>
                             </nav>
                         </div>
-
+                        <div class="header-bottom-icon toggle-search" id="searchproduct"><i class="fa fa-search" aria-hidden="true"></i></div>
 
                     </div>
                 </div>
-
+                <div class="header-search-wrapper">
+                    <div class="header-search-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                                    <form method="post" action="{{action('products_categoriesController@SearchQuery')}}">
+                                        @csrf
+                                        <div class="search-submit">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                            <input type="submit"/>
+                                        </div>
+                                        <input required  name="searchInput" class="simple-input style-1 "  type="text" value="" placeholder="Rechercher un produit par référence ou par son label" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-close"></div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </header>
+
     <div class="popup-wrapper">
         <div class="bg-layer"></div>
 
@@ -486,7 +504,11 @@
     <script src="assets/js/main.js"></script>
     @yield('content')
     </body>
-   <footer id="footer">
+
+   <footer id="footer" style="
+   -webkit-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.19);">
 
     <div class="footer-top">
         <div class="container">
@@ -549,3 +571,11 @@
     </div>
 </footer><!-- End Footer -->
 </html>
+<script>
+    $(document).on('click', '#searchproduct', function(){
+        $('.header-search-wrapper').addClass('active');
+    });
+    $(document).on('click', '.header-search-wrapper .button-close', function(){
+        $('.header-search-wrapper').removeClass('active');
+    });
+</script>
