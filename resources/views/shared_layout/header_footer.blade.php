@@ -91,8 +91,8 @@
                                         <a href="{{action('RoutingController@services')}}">Services</a>
                                     </li>
 
-                                    <li class="{{(\App\Http\Controllers\RoutingController::$active=='Domotique')?('active'): ('')}}">
-                                        <a href="{{action('RoutingController@index')}}">Domotique</a>
+                                    <li class="{{(\App\Http\Controllers\RoutingController::$active=='domotique')?('active'): ('')}}">
+                                        <a href="{{action('RoutingController@domotique')}}">Domotique</a>
                                     </li>
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='contact')?('active'): ('')}}">
                                     <a href="{{action('RoutingController@contact')}}">contact</a>

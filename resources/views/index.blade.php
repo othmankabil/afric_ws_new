@@ -14,6 +14,7 @@
                          data-aos="fade-up" data-aos-delay="200">
                         <h1 id="sheader_title_header"></h1>
                         <h2 id="sheader_description_header"></h2>
+                        <h2 id="sheader_description_header_mobile"></h2>
                         <div class="d-lg-flex">
                             <a id="sheader_btn_produit" href="" class="btn-get-started scrollto"></a>
                             <a id="sheader_btn_video_url" href="" class="venobox btn-watch-video" data-vbtype="video"
@@ -21,7 +22,7 @@
                                     class="icofont-play-alt-2"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <div id="img_homepage_head" class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
                         <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
                     </div>
                 </div>
@@ -69,7 +70,7 @@
             </section!--><!-- End Cliens Section -->
 
             <!-- ======= About Us Section ======= -->
-            <section id="about" class="about section-bg">
+            <section id="about" class="about">
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
@@ -95,7 +96,7 @@
             </section><!-- End About Us Section -->
 
             <!-- ======= Why Us Section ======= -->
-            <section id="why-us" class="why-us ">
+            <section id="why-us" class="why-us section-bg">
                 <div class="container-fluid" data-aos="fade-up">
 
                     <div class="row">
@@ -127,23 +128,8 @@
 
 
             <!-- ======= Services Section ======= -->
-            <section id="services" class="services section-bg">
-                <div class="container" data-aos="fade-up">
 
-                    <div class="section-title">
-                        <h2 id="sServices_title"></h2>
-                        <p id="sServices_description"></p>
-                    </div>
-                    <div class="slider-wrapper">
 
-                        <a class="swiper-button-next visible-lg" id="service_more"></a>
-                        <div class="row" id="service_slide">
-
-                        </div>
-                    </div>
-                </div>
-
-            </section><!-- End Services Section -->
 
             <!-- ======= Produit Section ======= -->
             <section id="produit" class="produit ">
@@ -217,6 +203,7 @@
                     var sessionData = tr.session_header;
                     $("#sheader_title_header").html(sessionData.sheader_title_header);
                     $("#sheader_description_header").html(sessionData.sheader_description_header);
+                    $("#sheader_description_header_mobile").html(sessionData.sheader_description_header_mobile);
                     $("#sheader_btn_produit").html(sessionData.sheader_btn_produit);
                     $("#sheader_btn_produit").attr("href", sessionData.sheader_btn_produit_url);
                     $("#sheader_btn_video_text").html(sessionData.sheader_btn_video_text);
@@ -278,6 +265,19 @@
                             '</div>');
                     }
                 });
+
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            var element = document.getElementById('img_homepage_head');
+            if (isMobile) {
+                element.style.display = 'none';
+                document.getElementById('sheader_description_header').style.display = 'none';
+                document.getElementById('sheader_btn_video_url').style.display = 'none';
+                document.getElementById('sheader_description_header_mobile').style.display = 'block';
+            }else {
+                document.getElementById('sheader_description_header_mobile').style.display = 'none';
+            }
+
+
         });
     </script>
 @endsection
