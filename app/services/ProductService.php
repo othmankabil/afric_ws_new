@@ -7,6 +7,7 @@ namespace App\services;
 use App\llx_categorie;
 use App\llx_ecm_files;
 use App\llx_product;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use phpDocumentor\Reflection\Types\Self_;
 use PhpParser\Node\Stmt\Break_;
@@ -61,7 +62,6 @@ class ProductService
         {
             $image_row_count = llx_ecm_files::where('filepath','=','produit/'.$productRef)->count();
             $image_row= llx_ecm_files::where('filepath','=','produit/'.$productRef)->skip(self::$skipValue)->first();
-
             //check if first row is an image
             if($image_row!=null)
             {
@@ -100,9 +100,22 @@ class ProductService
 
             //check if first row is a pdf
             if($image_row!=null)
+
+            //check if first row is an image
+            if(self::check_pdf($image_row->filename))
+            {
+                $image_path = $image_row->filepath.'/'.$image_row->filename;
+                self::$skipValue=0;
+
+                return $image_path;
+            }
+            //if its not an image we skip it and retrieve the next value
+            else
+
             {
                 if(self::check_pdf($image_row->filename))
                 {
+
                     $image_path = $image_row->filepath.'/'.$image_row->filename;
                     self::$skipValue=0;
                     return $image_path;
@@ -112,10 +125,11 @@ class ProductService
                 {
                     if (self::$skipValue<$image_row_count)
                     {
-                        ++Self::$skipValue;
-                        return self::getSingleImage($productRef);
+                       ++Self::$skipValue;
+                    return self::getSinglePdf($productRef);
                     }
                     return $image_path;
+
                 }
             }
 
