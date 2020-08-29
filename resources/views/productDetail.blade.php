@@ -228,7 +228,7 @@
                     @csrf
                     <div class="empty-space col-xs-b30"></div>
                     <input class="simple-input" type="text"  value="" name="client_first_name"
-                           oninvalid="this.setCustomValidity('Enter User Name Here')" placeholder="Nom" required />
+                            placeholder="Nom" required />
                     <div class="empty-space col-xs-b10 col-sm-b10"></div>
                     <input class="simple-input" type="text" value="" name="client_last_name" placeholder="Prénom" required/>
                     <div class="empty-space col-xs-b10 col-sm-b10"></div>

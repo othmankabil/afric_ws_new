@@ -538,10 +538,12 @@
                    <div class="col-lg-3 col-md-6 footer-links">
                        <h4>Nos Services</h4>
                        <ul>
-                           <li><i class="bx bx-chevron-right"></i> <a href="/services">Web Design</a></li>
-                           <li><i class="bx bx-chevron-right"></i> <a href="/services">Développement Web</a></li>
-                           <li><i class="bx bx-chevron-right"></i> <a href="/services">Domotique</a></li>
-                           <li><i class="bx bx-chevron-right"></i> <a href="/services">Marketing</a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/services">FORMATIONS</a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/services">CRM </a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/services">Service AV</a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/services">SERVICE COMMERCIAL</a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/services">SERVICE TECHNIQUE
+                               </a></li>
                        </ul>
                    </div>
 
