@@ -3,10 +3,11 @@
         "session_header": {
             "sheader_title_header": "Produits, Assistance et Outils de haute Qualité",
             "sheader_description_header": "la pandémie de covid-19 oblige le monde à trouver de nouvelles façons de rester connecté et travailler ensemble. les solutions de travail à distance de notre entreprise fournissent aux entreprises les outils qui permettent de collaborer à domicile.",
+            "sheader_description_header_mobile": "la pandémie de covid-19 oblige le monde à trouver de nouvelles façons de rester connecté et travailler ensemble.",
             "sheader_btn_produit": "Commençons",
-            "sheader_btn_produit_url": "https://www.google.com",
+            "sheader_btn_produit_url": "https://afric-domotique.ma/products?page=1",
             "sheader_btn_video_text": "Regarder la Vidéo",
-            "sheader_btn_video_url": "https://www.youtube.com/watch?v=oqmcvxzbRJs"
+            "sheader_btn_video_url": ""
         },
         "session_aboutUs": {
             "saboutUs_title": "À PROPOS DE NOUS",

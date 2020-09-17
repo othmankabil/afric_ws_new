@@ -7233,3 +7233,227 @@ section {
 	  padding-top: 4px;
 	}
   }
+/*--------------------------------------------------------------
+# AboutD
+--------------------------------------------------------------*/
+.aboutD {
+    background: #466393;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+    color: #fff;
+}
+
+.aboutD .content {
+    padding: 30px 30px 30px 0;
+}
+
+.aboutD .content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.aboutD .content p {
+    margin-bottom: 30px;
+}
+
+.aboutD .content .aboutD-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 30px 8px 30px;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.aboutD .content .aboutD-btn i {
+    font-size: 14px;
+}
+
+.aboutD .content .aboutD-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.aboutD .icon-boxes .icon-box {
+    margin-top: 30px;
+}
+
+.aboutD .icon-boxes .icon-box i {
+    font-size: 40px;
+    color: #b6bdfc;
+    margin-bottom: 10px;
+}
+
+.aboutD .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.aboutD .icon-boxes .icon-box p {
+    font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+    .aboutD .content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutD {
+        text-align: center;
+    }
+}
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+.features .content+.content {
+    margin-top: 100px;
+}
+
+.features .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.features .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features .content ul li {
+    padding-bottom: 10px;
+}
+
+.features .content ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #3b4ef8;
+}
+
+.features .content p:last-child {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq {
+    padding: 60px 0;
+    background-color: #f6f8fa;
+}
+
+.faq .faq-list {
+    padding: 0;
+    list-style: none;
+}
+
+.faq .faq-list li {
+    padding: 0 0 20px 25px;
+}
+
+.faq .faq-list a {
+    display: block;
+    position: relative;
+    font-family: #3b4ef8;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.faq .faq-list i {
+    font-size: 18px;
+    position: absolute;
+    left: -25px;
+    top: 6px;
+}
+
+.faq .faq-list p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.faq .faq-list a.collapse {
+    color: #3b4ef8;
+}
+
+.faq .faq-list a.collapsed {
+    color: #343a40;
+}
+
+.faq .faq-list a.collapsed:hover {
+    color: #3b4ef8;
+}
+
+.faq .faq-list a.collapsed i::before {
+    content: "\eab2" !important;
+}
+
+/*--------------------------------------------------------------
+# NOS VALEURS
+--------------------------------------------------------------*/
+.NOSVALEURS {
+    background: #2d405f;
+    padding-bottom: 80px;
+}
+
+.NOSVALEURS .section-title h2,
+.NOSVALEURS .section-title p {
+    color: #fff;
+}
+
+.NOSVALEURS .section-title h2::after {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.NOSVALEURS .icon-box {
+    padding: 50px 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.3s;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.NOSVALEURS .icon-box:hover {
+    transform: scale(1.08);
+}
+
+.NOSVALEURS .icon {
+    margin-bottom: 15px;
+}
+
+.NOSVALEURS .icon i {
+    font-size: 32px;
+    line-height: 1;
+    color: #2d405f;
+    background: #eff2f8;
+    padding: 20px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.NOSVALEURS .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.NOSVALEURS .title a {
+    color: #2d405f;
+    transition: 0.3s;
+}
+
+.NOSVALEURS .title a:hover {
+    color: #4e6fa4;
+}
+
+.NOSVALEURS .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+}

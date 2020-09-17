@@ -15,43 +15,40 @@
 
         </div>
         <div class="container ">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="icon-description-shortcode style-1">
-                        <img class="icon" src="img/icon-25.png" alt="">
-                        <div class="title h6">address</div>
-                        <div class="description simple-article size-2">1st, new york, usa</div>
+            <div class="col-sm-3">
+                <div class="icon-description-shortcode style-1">
+                    <img class="icon" src="img/icon-25.png" alt="">
+                    <div class="title h6">addresse</div>
+                    <div class="description simple-article size-2">Imm. 6 Tranche 1 Secteur 1 N° 3 Hay Al Walaa Sidi
+                        Moumen - Casablanca</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon-description-shortcode style-1">
+                    <img class="icon" src="img/icon-23.png" alt="">
+                    <div class="title h6">Téléphone</div>
+                    <div class="description simple-article size-2" style="line-height: 26px;">
+                        <a href="tel:(+212) 522 686 834">(+212) 522 686 834</a>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="icon-description-shortcode style-1">
-                        <img class="icon" src="img/icon-23.png" alt="">
-                        <div class="title h6">phone</div>
-                        <div class="description simple-article size-2" style="line-height: 26px;">
-                            <a href="tel:+35235551238745">+3 (523) 555 123 8745</a>
-                            <br />
-                            <a href="tel:+35235557585238">+3 (523) 555 758 5238</a>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon-description-shortcode style-1">
+                    <img class="icon" src="img/icon-28.png" alt="">
+                    <div class="title h6">email</div>
+                    <div class="description simple-article size-2"><a
+                            href="mailto:contact@afric-domotique.ma">contact@afric-domotique.ma</a></div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="icon-description-shortcode style-1">
-                        <img class="icon" src="img/icon-28.png" alt="">
-                        <div class="title h6">email</div>
-                        <div class="description simple-article size-2"><a
-                                href="mailto:offce@exzo.com">offce@exzo.com</a></div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="icon-description-shortcode style-1">
-                        <img class="icon" src="img/icon-26.png" alt="">
-                        <div class="title h6">Follow us</div>
-                        <div class="follow light">
-                            <a class="entry" href="#"><i class="fa fa-facebook"></i></a>
-                            <a class="entry" href="#"><i class="fa fa-twitter"></i></a>
-                            <a class="entry" href="#"><i class="fa fa-linkedin"></i></a>
-                            <a class="entry" href="#"><i class="fa fa-google-plus"></i></a>
-                        </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="icon-description-shortcode style-1">
+                    <img class="icon" src="img/icon-26.png" alt="">
+                    <div class="title h6">Nous suivre</div>
+                    <div class="follow light">
+                        <a class="entry" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="entry" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="entry" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="entry" href="#"><i class="fa fa-google-plus"></i></a>
                     </div>
                 </div>
             </div>
@@ -61,22 +58,23 @@
             <h4 class="h4 text-center col-xs-b25">VOUS AVEZ DES QUESTIONS?</h4>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <form class="contact-form">
+                    <form  method="post" action="{{\Illuminate\Support\Facades\URL::to('/contactSendMail')}}">
+                        @csrf
                         <div class="row m5">
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Nom" name="name" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Nom" name="name" required />
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Email" name="email" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Email" name="email" required />
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Téléphone" name="phone" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Téléphone" name="phone" required/>
                             </div>
                             <div class="col-sm-6">
-                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Sujet" name="subject" />
+                                <input class="simple-input col-xs-b20" type="text" value="" placeholder="Sujet" name="subject" required/>
                             </div>
                             <div class="col-sm-12">
-                                <textarea class="simple-input col-xs-b20" placeholder="Votre message" name="section-bg"></textarea>
+                                <textarea class="simple-input col-xs-b20" placeholder="Votre message" name="message" required></textarea>
                             </div>
                             <div class="col-sm-12">
                                 <div class="text-center">
@@ -84,6 +82,7 @@
                                         <span class="button-wrapper">
                                             <span class="icon"><img src="img/icon-4.png" alt=""></span>
                                             <span class="text">envoyer message</span>
+                                            <input type="submit">
                                         </span>
                                         <input type="submit"/>
                                     </div>
@@ -96,15 +95,4 @@
         </section>
 
     </div>
-
-<script>
-$(document).ready(function() {
-
-    $.getJSON("data/services.json",
-        function(data) {
-            var AllData = data.data;
-
-        });
-});
-</script>
 @endsection

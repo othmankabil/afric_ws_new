@@ -12,17 +12,22 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\Console\Input\Input;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
+
 
 
 class RoutingController extends Controller
 {
     static $active ;
-
+    function authentif(Request $request) {
+        return $request->user();
+    }
     public function index()
     {
         self::$active ='index';
         return view('index');
     }
+
 
     public function aboutUs()
     {
@@ -41,7 +46,11 @@ class RoutingController extends Controller
         self::$active ='contact';
         return view('contact');
     }
-
+    public function domotique()
+    {
+        self::$active ='domotique';
+        return view('domotique');
+    }
     public function productDetail($rowid)
     {
 
@@ -124,5 +133,27 @@ class RoutingController extends Controller
         Session::put('flash_message_status', $flash_message_status);
         return redirect("productDetail\\".$product_id);
 
+    }
+
+    public  function  contactSendMail(Request  $request)
+    {
+        $name= $request->input("name");
+        $email= $request->input("email");
+        $phone= $request->input("phone");
+        $subject=$request->input("subject");
+        $contact_message=$request->input("message");
+        $Client_data=array("name"=>$name,
+            "email"=>$email,
+            "phone"=>$phone,
+            "subject"=>$subject,
+            "contact_message"=>$contact_message);
+      Config::set('mail.username', 'contact@afric-domotique.ma');
+        Config::set('mail.password', 'jusbdlmg@2');
+        $sendMailToContact=Mail::send('sendMailToContact', $Client_data, function($message) {
+             $message->to('contact@afric-domotique.ma',"Afric Domotique Contact")
+                 ->subject('Afric Domotique Contact');
+             $message->from('contact@afric-domotique.ma','Afric Domotique');
+         });
+        return redirect("contact");
     }
 }
