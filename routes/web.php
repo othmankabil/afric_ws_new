@@ -2,19 +2,26 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/',"RoutingController@index");
 Route::get('aboutUs',"RoutingController@aboutUs");
 Route::get('services',"RoutingController@services");
 Route::get('contact',"RoutingController@contact");
-Route::get('productDetail/{rowid}',"RoutingController@productDetail");
+Route::get('domotique',"RoutingController@domotique");
+
+
+Route::get('/productDetail/{rowid}',"RoutingController@productDetail");
+Route::get('products',"RoutingController@products");
+Route::post('products',"products_categoriesController@SearchQuery");
+
+Route::get('categorie/{rowid}',"products_categoriesController@Categorie_products");
+
+Route::get('/sendMail',"RoutingController@sendMail");
+Route::post('/saveDevis',"RoutingController@sendMail");
+Route::post('/contactSendMail',"RoutingController@contactSendMail");
+
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+    return 'ok';
+});
+
