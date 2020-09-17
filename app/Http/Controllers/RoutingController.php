@@ -12,12 +12,16 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\Console\Input\Input;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
+
 
 
 class RoutingController extends Controller
 {
     static $active ;
-
+    function authentif(Request $request) {
+        return $request->user();
+    }
     public function index()
     {
         self::$active ='index';

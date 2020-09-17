@@ -24,10 +24,16 @@ class productDetailService
     }
     public static function getCategorieParent($mother)
     {
-        $CatParent = llx_categorie::find($mother->fk_parent);
-        if($CatParent != null)
-            return $CatParent;
+        if($mother != "pas de  Categorie")
+        {
+           
+            $CatParent = llx_categorie::find($mother->fk_parent);
+              if($CatParent != null)
+                 return $CatParent;
+             return null;
+        }
         return null;
+        
     }
 
     public static function getRelatedProducts($prod)
@@ -53,7 +59,9 @@ class productDetailService
             }
         }
         else{
-            $categoriesubs = CategorieService::getCategorieSubs($mother->rowid);
+            if ($mother != "pas de  Categorie")
+            {
+                 $categoriesubs = CategorieService::getCategorieSubs($mother->rowid);
             $mergedProductsCollection = collect();
             if($categoriesubs != null)
             {
@@ -68,6 +76,10 @@ class productDetailService
                 $categorie = llx_categorie::find($mother->rowid);
                 return $categorie->llx_products;
             }
+            }else{
+                return llx_product::take(6)->get();
+            }
+           
         }
 
     }

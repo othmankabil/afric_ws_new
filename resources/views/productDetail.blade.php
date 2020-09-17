@@ -11,14 +11,15 @@
                 <a href="/">home</a>
                 <a href="/products?page=1">Produits</a>
                     @if(\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product)) !=null)
-                        <a href="categorie/{{\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product))->rowid}}">{{\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product))->label}}</a>
-                        <a href="categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{\App\services\productDetailService::getProductFirstCategorie($product)->label}}</a>
+                        <a href="/categorie/{{\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product))->rowid}}">{{\App\services\productDetailService::getCategorieParent(\App\services\productDetailService::getProductFirstCategorie($product))->label}}</a>
+                        <a href="/categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{\App\services\productDetailService::getProductFirstCategorie($product)->label}}</a>
+                @elseif(App\services\productDetailService::getProductFirstCategorie($product) != "pas de  Categorie")
+                    <a href="/categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{\App\services\productDetailService::getProductFirstCategorie($product)->label}}</a>
                 @else
-                    <a href="categorie/{{\App\services\productDetailService::getProductFirstCategorie($product)->rowid}}">{{AppservicesproductDetailService::getProductFirstCategorie($product)->label}}</a>
+                <a >Pas de Categorie</a>
                 @endif
             </div>
             <div class="empty-space col-xs-b25 col-sm-b50"></div>
-
 
             <div class="row">
                 <div class="col-md-9 col-md-push-3">
@@ -67,9 +68,9 @@
                             </div>
                             <div class="simple-article size-3 col-xs-b15">Ce produit offre des fonctionnalités de pointe pour maximiser la personnalisation de votre réseau, tout en étant optimisées pour fonctionner ensemble de manière transparente. Pour plus d'information veuillez demander de devis.</div>
 
-                            <a class="button size-2 style-6 block col-xs-b15"  href="{{asset(\App\services\ProductService::getSinglePdf($product->ref))}}">
+                            <a class="button size-2 style-6 block col-xs-b15"  href="{{asset(\App\services\ProductService::getSinglePdf($product->ref))}}"  target="_blank">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="img/icon-datasheet.png" alt=""></span>
+                                            <span class="icon"><img src="{{asset('img/icon-datasheet.png')}}" alt=""></span>
                                             <span class="text">Fiche technique du produit</span>
                                         </span>
                             </a>
@@ -77,7 +78,7 @@
                                 <div class="col-sm-12 col-xs-b10 col-sm-b0">
                                     <a class="button size-2 style-2 block open-popup" data-rel="5">
                                         <span class="button-wrapper">
-                                            <span class="icon"><img src="img/icon-devis.png" alt=""></span>
+                                            <span class="icon"><img src="{{asset('img/icon-devis.png')}}" alt=""></span>
                                             <span class="text">Demande Devis</span>
                                         </span>
                                     </a>
@@ -190,7 +191,7 @@
                                         </div>
                                         <div class="bord" style="margin-bottom: 10px">
                                             <div class="title">
-                                                <div class="h6"><a href="productDetail/{{$product->rowid}}" >{{$product->ref}}</a></div>
+                                                <div class="h6"><a href="/productDetail/{{$product->rowid}}" >{{$product->ref}}</a></div>
                                             </div>
                                             <div class="description">
                                                 <div class="simple-article text size-2">{{$product->label}}</div>
@@ -199,9 +200,9 @@
                                         </div>
                                         <div class="preview-buttons">
                                             <div class="buttons-wrapper">
-                                                <a class="button size-1 style-3" href="productDetail/{{$product->rowid}}">
+                                                <a class="button size-1 style-3" href="/productDetail/{{$product->rowid}}">
                                                     <span class="button-wrapper">
-                                                        <span class="icon"><img src="img/icon-1.png" alt=""></span>
+                                                        <span class="icon"><img src="{{asset('img/icon-1.png')}}" alt=""></span>
                                                         <span class="text">Details</span>
                                                     </span>
                                                 </a>
@@ -245,7 +246,7 @@
                         <div class="col-sm-10 text-right">
                             <div class="button size-2 style-3" id="submitForm">
                                 <span class="button-wrapper">
-                                    <span class="icon"><img src="img/icon-4.png" alt="" /></span>
+                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
                                     <span class="text">Demander</span>
                                     <input type="submit">
                                 </span>
