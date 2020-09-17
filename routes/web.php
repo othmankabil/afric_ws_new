@@ -20,3 +20,8 @@ Route::get('/sendMail',"RoutingController@sendMail");
 Route::post('/saveDevis',"RoutingController@sendMail");
 Route::post('/contactSendMail',"RoutingController@contactSendMail");
 
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+    return 'ok';
+});
+

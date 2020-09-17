@@ -191,7 +191,7 @@
 
                                                         <tr style=" line-height:30px;" >
                                                             <td class="esd-block-button es-p20t es-p20b es-p10r es-p10l" align="center">
-                                                                <span class="es-button-border" style="background: #f8f3ef none repeat scroll 0% 0%;"><a href="http://127.0.0.1:8000/productDetail/{{$product_id}}" class="es-button" target="_blank" style="background: #f8f3ef none repeat scroll 0% 0%; border-color: #f8f3ef;">Lien de Produit</a></span></td>
+                                                                <span class="es-button-border" style="background: #f8f3ef none repeat scroll 0% 0%;"><a href="http://afric-domotique.ma/productDetail/{{$product_id}}" class="es-button" target="_blank" style="background: #f8f3ef none repeat scroll 0% 0%; border-color: #f8f3ef;">Lien de Produit</a></span></td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
