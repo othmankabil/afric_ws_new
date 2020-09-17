@@ -1,15 +1,15 @@
 
-## About Laravel
+## ToDo if it's your First pull from repo
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- run this  command in th root of the project to install all of the framework's dependencies [ composer install ]
+- Create symLink between this File "https://drive.google.com/drive/folders/1ovr40QbFZJ-P94yjpFB5LSBT5yanGAeU?usp=sharing" and public/produit
+- use this .env File "https://drive.google.com/file/d/1LzuN4ewJxizYFatSWQULyR1NVyfROPjc/view?usp=sharing"
+- clear the cach and config files with this command [php artisan optimize]
+- [php artisan serve] to Run the project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ToDo if it's NOT your First pull from repo
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- clear the cach and config files with this command [php artisan optimize]
+
+
 
