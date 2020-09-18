@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @if($origin == 'cat')
+    <meta name="description" content="{{$mother->label}}">
+    <meta property="og:description" content="{{$mother->label}}">
+    <meta property="og:title" content="{{$mother->label}}">
+    <meta name="keywords" content="Afric Domotique,matériel informatique,fournitures de bureau,Produits,{{$mother->label}}">
+    @else
+        <meta name="description" content="Produits et service d'Afric Domotique">
+        <meta property="og:description" content="Produits et service d'Afric Domotique">
+        <meta property="og:title" content="Produits et service d'Afric Domotique">
+        <meta name="keywords" content="Afric Domotique,matériel informatique,fournitures de bureau,Produits">
+    @endif
 @extends('shared_layout.header_footer')
 @section('content')
 <!-- LOADER -->

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="informations pour contacter Afric domotique">
+    <meta property="og:description" content="informations pour contacter Afric domotique">
+    <meta property="og:title" content="contacter Afric domotique">
+    <meta name="keywords" content="contact@afric-domotique.ma,Imm. 6 Tranche 1 Secteur 1 N° 3 Hay Al Walaa Sidi Moumen - Casablanca,(+212) 522 686 834">
+
 @extends('shared_layout.header_footer')
 
 @section('content')

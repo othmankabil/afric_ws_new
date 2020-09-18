@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta property="og:site_name" content="Afric Domotique">
+    <meta property="og:url" content="{{\Illuminate\Support\Facades\URL::current()}}">
+    <meta name="language" content="fr">
+    <meta name="robots" content="Index,Follow">
+
 <!-- Google Fonts -->
 <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -318,7 +319,7 @@
                            <li><i class="bx bx-chevron-right"></i> <a href="/aboutUs">À PROPOS DE NOUS</a></li>
                            <li><i class="bx bx-chevron-right"></i> <a href="/products?page=1">PRODUITS</a></li>
                            <li><i class="bx bx-chevron-right"></i> <a href="/services">SERVICES</a></li>
-                           <li><i class="bx bx-chevron-right"></i> <a href="/domotic">DOMOTIQUE</a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/domotique">DOMOTIQUE</a></li>
                            <li><i class="bx bx-chevron-right"></i> <a href="/contact">NOUS CONTACTER</a></li>
                        </ul>
                    </div>
