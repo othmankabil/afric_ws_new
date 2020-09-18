@@ -136,7 +136,13 @@
                         <div class="tab-entry">
                             <div class="empty-space col-xs-b5"></div>
                             <div class="empty-space col-xs-b20"></div>
-                            <div class="simple-article size-2">{{$product->note}}</div>
+                            <div class="simple-article size-2"><p>
+                                    @foreach(explode('<br />',  nl2br($product->note)) as $note)
+                                        {{ $note }}
+                                    @if(!$loop->last)
+                                            <br>
+                                    @endif
+                                    @endforeach</p></div>
                             <div class="empty-space col-xs-b25"></div>
 
                         </div>
