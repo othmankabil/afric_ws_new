@@ -6,7 +6,7 @@
     <!-- LOADER -->
     <div id="loader-wrapper"></div>
 
-    <div id="content-block">
+    <div id="AboutUs-block">
 
         <div class="header-empty-space"></div>
         <div class="empty-space col-xs-b35 col-md-b50"></div>

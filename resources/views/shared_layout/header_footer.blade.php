@@ -69,10 +69,10 @@
         <div class="header-bottom">
             <div class="content-margins">
                 <div class="row">
-                    <div class="col-xs-3 col-sm-1">
+                    <div class="col-xs-2 col-sm-1">
                         <a id="logo" href="{{action('RoutingController@index')}}"><img src="{{asset('img/logo-2.png')}}" alt="" /></a>
                     </div>
-                    <div class="col-xs-9 col-sm-11 text-right">
+                    <div class="col-xs-10 col-sm-11 text-right">
                         <div class="nav-wrapper">
                             <div class="nav-close-layer"></div>
                             <nav>
@@ -142,53 +142,18 @@
             <div class="layer-close"></div>
             <div class="popup-container size-1">
                 <div class="popup-align">
-                    <h3 class="h3 text-center">Log in</h3>
+                    <h3 class="h3 text-center">Connexion</h3>
                     <div class="empty-space col-xs-b30"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Your email" />
+                    <input class="simple-input" type="text" value="" placeholder="Identifiant ou adresse de messagerie" />
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="password" value="" placeholder="Enter password" />
+                    <input class="simple-input" type="password" value="" placeholder="Mot de passe" />
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
                     <div class="row">
-                        <div class="col-sm-6 col-xs-b10 col-sm-b0">
-                            <div class="empty-space col-sm-b5"></div>
-                            <a class="simple-link">Forgot password?</a>
-                            <div class="empty-space col-xs-b5"></div>
-                            <a class="simple-link">register now</a>
-                        </div>
-                        <div class="col-sm-6 text-right">
+                        <div class="col-sm-12 text-right">
                             <a class="button size-2 style-3" href="#">
                                 <span class="button-wrapper">
                                     <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">submit</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="popup-or">
-                        <span>or</span>
-                    </div>
-                    <div class="row m5">
-                        <div class="col-sm-4 col-xs-b10 col-sm-b0">
-                            <a class="button facebook-button size-2 style-4 block" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">facebook</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-sm-4 col-xs-b10 col-sm-b0">
-                            <a class="button twitter-button size-2 style-4 block" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">twitter</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-sm-4">
-                            <a class="button google-button size-2 style-4 block" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">google+</span>
+                                    <span class="text">IDENTIFICATION</span>
                                 </span>
                             </a>
                         </div>
@@ -202,57 +167,22 @@
             <div class="layer-close"></div>
             <div class="popup-container size-1">
                 <div class="popup-align">
-                    <h3 class="h3 text-center">register</h3>
+                    <h3 class="h3 text-center">S’enregistrer</h3>
                     <div class="empty-space col-xs-b30"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Your name" />
+                    <input class="simple-input" type="text" value="" placeholder="Identifiant" />
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Your email" />
+                    <input class="simple-input" type="text" value="" placeholder="Adresse de messagerie" />
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="password" value="" placeholder="Enter password" />
+                    <input class="simple-input" type="password" value="" placeholder="Mot de passe" />
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="password" value="" placeholder="Repeat password" />
+                    <input class="simple-input" type="password" value="" placeholder="Confirmer mot de passe" />
                     <div class="empty-space col-xs-b10 col-sm-b20"></div>
                     <div class="row">
-                        <div class="col-sm-7 col-xs-b10 col-sm-b0">
-                            <div class="empty-space col-sm-b15"></div>
-                            <label class="checkbox-entry">
-                                <input type="checkbox" /><span><a href="#">Privacy policy agreement</a></span>
-                            </label>
-                        </div>
-                        <div class="col-sm-5 text-right">
+                        <div class="col-sm-12 text-right">
                             <a class="button size-2 style-3" href="#">
                                 <span class="button-wrapper">
                                     <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">submit</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="popup-or">
-                        <span>or</span>
-                    </div>
-                    <div class="row m5">
-                        <div class="col-sm-4 col-xs-b10 col-sm-b0">
-                            <a class="button facebook-button size-2 style-4 block" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">facebook</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-sm-4 col-xs-b10 col-sm-b0">
-                            <a class="button twitter-button size-2 style-4 block" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">twitter</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-sm-4">
-                            <a class="button google-button size-2 style-4 block" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">google+</span>
+                                    <span class="text">S’ENREGISTRER</span>
                                 </span>
                             </a>
                         </div>
@@ -295,7 +225,6 @@
 
    <footer id="footer" style="
    -webkit-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.4);
     box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.19);">
 
        <div class="footer-top">
