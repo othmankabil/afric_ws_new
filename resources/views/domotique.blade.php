@@ -1,10 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="Qu’est-ce que la domotique ?">
+    <meta property="og:description" content="Qu’est-ce que la domotique ?">
+    <meta property="og:title" content="Qu’est-ce que la domotique ?">
+    <meta name="keywords" content="COMPRENDRE LA DOMOTIQUE,La domotique,le domotique,domotique,domotic,domoutique,domoutic,smart home,home smart,maroc domotique,morroco domotique,securite,maroc securite">
 @extends('shared_layout.header_footer')
 @section('content')
 
     <!-- LOADER -->
     <div id="loader-wrapper"></div>
 
-    <div id="content-block">
+    <div id="Domotique-block">
         <!-- HEADER -->
         <div class="empty-space col-xs-b25 col-sm-b100"></div>
         <main id="main">
@@ -71,10 +78,10 @@
                         </div>
                         <div class="col-md-7 pt-4" data-aos="fade-left" data-aos-delay="100">
                             <h3 id="sfeatures_title_right1"></h3>
-                            <p id="sfeatures_title_description_right1" class="font-italic">
+                            <p id="sfeatures_title_description_right1" class="desc_domotique">
 
                             </p>
-                            <ul id="features_description_ul">
+                            <ul id="features_description_ul" class="ul_domotique_content">
 
                             </ul>
                         </div>
@@ -86,9 +93,9 @@
                         </div>
                         <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
                             <h3 id="sfeatures_title_left"></h3>
-                            <p id="sfeatures_title_description_left" class="font-italic">
+                            <p id="sfeatures_title_description_left" class="desc_domotique">
                             </p>
-                            <p id="sfeatures_description2">
+                            <p id="sfeatures_description2" class="p_domotique_content">
 
                             </p>
                         </div>
@@ -100,8 +107,8 @@
                         </div>
                         <div class="col-md-7 pt-5" data-aos="fade-left">
                             <h3 id="sfeatures_title_right2"></h3>
-                            <p id="sfeatures_title_description_right2"></p>
-                            <ul id="features_description_ul1">
+                            <p id="sfeatures_title_description_right2" class="desc_domotique"></p>
+                            <ul id="features_description_ul1" class="ul_domotique_content">
 
                             </ul>
                         </div>
@@ -116,7 +123,7 @@
                     <div class="row">
 
                         <div
-                            class="col-lg-8 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+                            class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
                             <div class="section-title">
                                 <h2 id="sfaq_title"></h2>
@@ -230,10 +237,6 @@
                             </div>
 
                         </div>
-
-                        <div class="col-lg-4 align-items-stretch order-1 order-lg-2 img"
-                             style='background-image: url("img/Domotique-06.jpg");' data-aos="zoom-in"
-                             data-aos-delay="150">&nbsp;</div>
                     </div>
 
                 </div>

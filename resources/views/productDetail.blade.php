@@ -1,7 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="{{$product->label}},{{$product->ref}}">
+    <meta property="og:description" content="{{$product->label}},{{$product->ref}}">
+    <meta property="og:title" content="{{$product->label}}">
+    <meta name="keywords" content="Afric Domotique,telecommunication,Domotique,matériel informatique,services informatiques,fournitures de bureau,{{$product->ref}},{{$product->label}}">
 @extends('shared_layout.header_footer')
 
 @section('content')
-
+    <div id="loader-wrapper"></div>
     <div id="content-block">
         <div class="header-empty-space"></div>
 
@@ -136,7 +143,13 @@
                         <div class="tab-entry">
                             <div class="empty-space col-xs-b5"></div>
                             <div class="empty-space col-xs-b20"></div>
-                            <div class="simple-article size-2">{{$product->note}}</div>
+                            <div class="simple-article size-2"><p>
+                                    @foreach(explode('<br />',  nl2br($product->note)) as $note)
+                                        {{ $note }}
+                                    @if(!$loop->last)
+                                            <br>
+                                    @endif
+                                    @endforeach</p></div>
                             <div class="empty-space col-xs-b25"></div>
 
                         </div>
