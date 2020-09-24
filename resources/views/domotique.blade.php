@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="Qu’est-ce que la domotique ?">
+    <meta property="og:description" content="Qu’est-ce que la domotique ?">
+    <meta property="og:title" content="Qu’est-ce que la domotique ?">
+    <meta name="keywords" content="COMPRENDRE LA DOMOTIQUE,La domotique,le domotique,domotique,domotic,domoutique,domoutic,smart home,home smart,maroc domotique,morroco domotique,securite,maroc securite">
 @extends('shared_layout.header_footer')
 @section('content')
 

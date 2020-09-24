@@ -1,4 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="société Afric Domotique,telecommunication,Domotique,matériel informatique,services informatiques,fournitures de bureau">
+    <meta property="og:description" content="société Afric Domotique,telecommunication,Domotique,matériel informatique,services informatiques,fournitures de bureau">
+    <meta property="og:title" content="Afric Domotique - Téléphonie IP, Base de Données, Vidéo et Sécurité">
+    <meta name="keywords" content="Afric Domotique,telecommunication,Domotique,matériel informatique,services informatiques,fournitures de bureau">
 @extends('shared_layout.header_footer')
+
 @section('content')
 
     <div id="content-block">
@@ -158,7 +166,7 @@
                                         </div>
                                         <div class="bord" style="margin-bottom: 10px">
                                             <div class="title">
-                                                <div class="h6"><a href="#">{{$product->ref}}</a></div>
+                                                <div class="h6"><a href="productDetail/{{$product->rowid}}">{{$product->ref}}</a></div>
                                             </div>
                                             <div class="description">
                                                 <div class="simple-article text size-2">{{$product->label}}</div>

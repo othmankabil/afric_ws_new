@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta property="og:site_name" content="Afric Domotique">
+    <meta property="og:url" content="{{\Illuminate\Support\Facades\URL::current()}}">
+    <meta name="language" content="fr">
+    <meta name="robots" content="Index,Follow">
+
 <!-- Google Fonts -->
 <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -51,9 +52,31 @@
                                 href="tel:+212522686834">(+212) 522 686 834</a></div>
                         <div class="entry hidden-xs hidden-sm"><b>email:</b> <a
                                 href="mailto:contact@afric-domotique.ma">contact@afric-domotique.ma</a></div>
-                        <div class="entry"><a class="open-popup" data-rel="1"><b>s'identifier</b></a>&nbsp; ou &nbsp;<a
-                                class="open-popup" data-rel="2"><b>S'inscrire</b></a></div>
+                        @guest
+                        <div class="entry ">
+                            <a  href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </div>
+                            @if (Route::has('register'))
+                                <div class="entry">
+                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </div>
+                            @endif
+                        @else
+                            <div class="entry language">
+                                <div class="title"> <b style="color: #fd7e14">{{ Auth::user()->name }}</b></div>
+                                <div class="language-toggle header-toggle-animation">
+                                    <a  class="dropdown-item " href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                </div>
+                            </div>
 
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        @endguest
                         <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o"
                                     aria-hidden="true"></i></a></div>
 
@@ -135,65 +158,10 @@
         </div>
     </header>
 
-    <div class="popup-wrapper">
-        <div class="bg-layer"></div>
-
-        <div class="popup-content" data-rel="1">
-            <div class="layer-close"></div>
-            <div class="popup-container size-1">
-                <div class="popup-align">
-                    <h3 class="h3 text-center">Connexion</h3>
-                    <div class="empty-space col-xs-b30"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Identifiant ou adresse de messagerie" />
-                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="password" value="" placeholder="Mot de passe" />
-                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <div class="row">
-                        <div class="col-sm-12 text-right">
-                            <a class="button size-2 style-3" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">IDENTIFICATION</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-close"></div>
-            </div>
-        </div>
-
-        <div class="popup-content" data-rel="2">
-            <div class="layer-close"></div>
-            <div class="popup-container size-1">
-                <div class="popup-align">
-                    <h3 class="h3 text-center">S’enregistrer</h3>
-                    <div class="empty-space col-xs-b30"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Identifiant" />
-                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="text" value="" placeholder="Adresse de messagerie" />
-                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="password" value="" placeholder="Mot de passe" />
-                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <input class="simple-input" type="password" value="" placeholder="Confirmer mot de passe" />
-                    <div class="empty-space col-xs-b10 col-sm-b20"></div>
-                    <div class="row">
-                        <div class="col-sm-12 text-right">
-                            <a class="button size-2 style-3" href="#">
-                                <span class="button-wrapper">
-                                    <span class="icon"><img src="{{asset('img/icon-4.png')}}" alt="" /></span>
-                                    <span class="text">S’ENREGISTRER</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-close"></div>
-            </div>
-        </div>
 
 
-    </div>
+
+
 
     <script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
     <script src="{{asset('js/swiper.jquery.min.js')}}"></script>
@@ -247,7 +215,7 @@
                            <li><i class="bx bx-chevron-right"></i> <a href="/aboutUs">À PROPOS DE NOUS</a></li>
                            <li><i class="bx bx-chevron-right"></i> <a href="/products?page=1">PRODUITS</a></li>
                            <li><i class="bx bx-chevron-right"></i> <a href="/services">SERVICES</a></li>
-                           <li><i class="bx bx-chevron-right"></i> <a href="/domotic">DOMOTIQUE</a></li>
+                           <li><i class="bx bx-chevron-right"></i> <a href="/domotique">DOMOTIQUE</a></li>
                            <li><i class="bx bx-chevron-right"></i> <a href="/contact">NOUS CONTACTER</a></li>
                        </ul>
                    </div>
