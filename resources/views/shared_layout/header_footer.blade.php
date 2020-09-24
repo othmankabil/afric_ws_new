@@ -173,7 +173,7 @@
                 <div class="popup-align">
                     <h3 class="h3 text-center">Log in</h3>
                     <div class="empty-space col-xs-b30"></div>
-                    <embed src="assets/pdf/s_grand.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="400px">
+                    <embed src="assets/pdf/s_grand#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="400px">
 
                 </div>
                 <div class="button-close"></div>

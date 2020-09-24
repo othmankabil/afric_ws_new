@@ -158,6 +158,15 @@
 
             </div>
                 <div class="col-md-3 col-md-pull-9">
+                    <form method="post" action="{{action('products_categoriesController@SearchQuery')}}">
+                        @csrf
+                        <input required name="searchInput" class="simple-input" id="searchfield" type="text"  placeholder="Recherche Produit" />
+                        <div class="search-submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="submit"/>
+                        </div>
+                    </form>
+                    <div class="empty-space col-xs-b25 col-sm-b20"></div>
                     <div class="h4 col-xs-b10">categories</div>
                     <ul class="categories-menu transparent">
                         @foreach(\App\services\CategorieService::getMotherlessCategories() as $categorie)
