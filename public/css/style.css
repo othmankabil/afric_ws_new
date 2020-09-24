@@ -1921,7 +1921,7 @@ form {
 	left: 0;
 	top: 50%;
 	width: 100%;
-	background: #eee;
+	background: darkorange;
 	content: "";
 	height: 1px;
 }
@@ -1929,7 +1929,7 @@ form {
 .popup-or span {
 	width: 60px;
 	height: 60px;
-	border: 5px #eee solid;
+	border: 2px whitesmoke solid;
 	border-radius: 30px;
 	-webkit-border-radius: 30px;
 	text-align: center;
@@ -2216,7 +2216,6 @@ header {
 .header-top .language .title {
 	padding-right: 15px;
 	width: 35px;
-	background: url(../img/icon-7.png) right center no-repeat;
 	text-align: left;
 }
 

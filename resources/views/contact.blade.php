@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta name="description" content="informations pour contacter Afric domotique">
     <meta property="og:description" content="informations pour contacter Afric domotique">

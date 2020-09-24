@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     @if($origin == 'cat')
     <meta name="description" content="{{$mother->label}}">

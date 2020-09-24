@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta name="description" content="{{$product->label}},{{$product->ref}}">
     <meta property="og:description" content="{{$product->label}},{{$product->ref}}">

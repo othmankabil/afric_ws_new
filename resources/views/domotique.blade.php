@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta name="description" content="Qu’est-ce que la domotique ?">
     <meta property="og:description" content="Qu’est-ce que la domotique ?">

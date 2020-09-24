@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta name="description" content="société Afric Domotique,telecommunication,Domotique,matériel informatique,services informatiques,fournitures de bureau">
     <meta property="og:description" content="société Afric Domotique,telecommunication,Domotique,matériel informatique,services informatiques,fournitures de bureau">
