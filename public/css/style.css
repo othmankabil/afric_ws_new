@@ -7490,31 +7490,31 @@ section {
     font-family: "Times New Roman", sans-serif;
     font-size: 18px;
 }
-#ListProduit-block .listCat {
+.ListProduit-block .listCat {
     position: relative;
     min-height: 1px;
     padding-right: 10px;
     padding-left: 10px;
     margin-top: 5px;
 }
-#ListProduit-block ul {
+.ListProduit-block ul {
     margin-left: 10px;
 }
 
-#ListProduit-block #searchfield{
+.ListProduit-block #searchfield{
     border-radius: 3px;
     border: 1px #4444 solid;
 }
-#ListProduit-block .search-submit {
+.ListProduit-block .search-submit {
    background-color:#ff7c4d;
     border: 1px #4444 solid;
     border-radius: 3px;
     color: #ffff;
 }
-#ListProduit-block .search-submit:hover {
+.ListProduit-block .search-submit:hover {
     color: #ffff;
 }
-#ListProduit-block #backToLastCat .text
+.ListProduit-block #backToLastCat .text
 {
     font-family: "Times New Roman", sans-serif;
     font-size: 18px;
@@ -7523,12 +7523,12 @@ section {
     text-transform: uppercase;
 
 }
-#ListProduit-block #backToLastCat .fa-angle-left
+.ListProduit-block #backToLastCat .fa-angle-left
 {
     font-size: 18px;
     color: #666;
 }
-#ListProduit-block #backToLastCat:hover
+.ListProduit-block #backToLastCat:hover
 {
     color: #666;
 }

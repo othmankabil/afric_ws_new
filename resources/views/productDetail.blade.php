@@ -9,7 +9,7 @@
 
 @section('content')
     <div id="loader-wrapper"></div>
-    <div id="content-block">
+    <div class="ListProduit-block">
         <div class="header-empty-space"></div>
 
         <div class="container">
@@ -157,7 +157,7 @@
 
 
             </div>
-                <div class="col-md-3 col-md-pull-9">
+                <div class="col-md-3 col-md-pull-9 listCat">
                     <form method="post" action="{{action('products_categoriesController@SearchQuery')}}">
                         @csrf
                         <input required name="searchInput" class="simple-input" id="searchfield" type="text"  placeholder="Recherche Produit" />
