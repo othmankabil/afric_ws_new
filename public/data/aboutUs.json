@@ -3,6 +3,7 @@
         "aboutUs_header": {
             "aboutUs_title": "À PROPOS DE NOUS"
         },
+
         "session_data":[
             {
                 "title":"OUVERT SUR L’AVENIR",
@@ -17,19 +18,20 @@
                 "right_description_1":"La solution que vous propose Afric Domotique est basée sur une plateforme ouverte performante, mature, fiable, sécurisée, et surtout à faible coût pour faciliter la gestion complète de votre entreprise.",
                 "right_description_2":"Quels que soient vos besoins ou vos attentes, nos solutions opensources sauront s’adapter à votre demande."
 
+
             },
             {
-                "title":"OUVERT SUR L’INNOVATION",
-                "left_description":"Nous apprécions et stimulons la capacité d'imaginer des espaces et des accès révolutionnaires.",
-                "right_description_1":"Nous écoutons et apprécions les besoins et les désirs de nos clients et transformons ces idées en réalité.",
-                "right_description_2":"Afric Domotique trouve constamment des moyens d'aider et d'améliorer d'autres entreprises et organisations à innover et à évoluer grâce à nos produits."
+                "title": "OUVERT SUR L’INNOVATION",
+                "left_description": "Nous apprécions et stimulons la capacité d'imaginer des espaces et des accès révolutionnaires.",
+                "right_description_1": "Nous écoutons et apprécions les besoins et les désirs de nos clients et transformons ces idées en réalité.",
+                "right_description_2": "Afric Domotique trouve constamment des moyens d'aider et d'améliorer d'autres entreprises et organisations à innover et à évoluer grâce à nos produits."
             },
             {
-                "title":"Votre identité sur Internet.",
-                "left_description":"En ce 21ème siècle, une entreprise, sans site vitrine, est appelée à disparaître au fil des ans.",
-                "right_description_1":"Nous personnalisons votre site internet selon vos besoins et attentes. La solution proposée s'adapte à tous les écrans (PC, tablettes, ou mobiles).",
-                "right_description_2":"Une équipe d'experts en création de site internet vous est entièrement dédiée pour vous former et accompagner à tout moment. ",
-                "right_description_3":"Afric Domotique assure votre présence sur les réseaux sociaux avec une présentation professionnelle: Facebook, Twitter, Linkedin, Chaine Youtube,..."
+                "title": "Votre identité sur Internet.",
+                "left_description": "En ce 21ème siècle, une entreprise, sans site vitrine, est appelée à disparaître au fil des ans.",
+                "right_description_1": "Nous personnalisons votre site internet selon vos besoins et attentes. La solution proposée s'adapte à tous les écrans (PC, tablettes, ou mobiles).",
+                "right_description_2": "Une équipe d'experts en création de site internet vous est entièrement dédiée pour vous former et accompagner à tout moment. ",
+                "right_description_3": "Afric Domotique assure votre présence sur les réseaux sociaux avec une présentation professionnelle: Facebook, Twitter, Linkedin, Chaine Youtube,..."
 
             }
         ]
