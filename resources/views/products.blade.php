@@ -147,11 +147,12 @@
             <div class="col-md-3 col-md-pull-9 listCat">
                 <form method="post" action="{{action('products_categoriesController@SearchQuery')}}">
                     @csrf
+                    <input required name="searchInput" class="simple-input" id="searchfield" type="text"  placeholder="Recherche Produit" />
                     <div class="search-submit">
                         <i class="fa fa-search" aria-hidden="true"></i>
                         <input type="submit"/>
                     </div>
-                    <input class="simple-input" id="searchfield" type="text" value="" placeholder="Recherche Produit" />
+
                 </form>
                 <div class="empty-space col-xs-b25 col-sm-b20"></div>
             @if($origin == 'home')
