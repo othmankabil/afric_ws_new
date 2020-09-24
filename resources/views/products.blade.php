@@ -17,7 +17,7 @@
 <!-- LOADER -->
 <div id="loader-wrapper"></div>
 
-<div id="ListProduit-block">
+<div class="ListProduit-block">
     <!-- HEADER -->
 
     <div class="header-empty-space"></div>
