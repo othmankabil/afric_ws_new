@@ -147,7 +147,7 @@ class RoutingController extends Controller
             "phone"=>$phone,
             "subject"=>$subject,
             "contact_message"=>$contact_message);
-      Config::set('mail.username', 'contact@afric-domotique.ma');
+        Config::set('mail.username', 'contact@afric-domotique.ma');
         Config::set('mail.password', 'jusbdlmg@2');
         $sendMailToContact=Mail::send('sendMailToContact', $Client_data, function($message) {
              $message->to('contact@afric-domotique.ma',"Afric Domotique Contact")

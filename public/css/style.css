@@ -281,8 +281,8 @@ a {
 
 .content-margins {
 	position: relative;
-	border-left: 50px transparent solid;
-	border-right: 50px transparent solid;
+	border-left: 15px transparent solid;
+	border-right: 15px transparent solid;
 }
 
 @media (max-width: 991px) {
@@ -642,6 +642,8 @@ body.mobile .fixed-background {
 .simple-article {
 	color: #888;
 }
+
+
 
 .simple-article.grey,
 .grey {
@@ -1921,7 +1923,7 @@ form {
 	left: 0;
 	top: 50%;
 	width: 100%;
-	background: #eee;
+	background: darkorange;
 	content: "";
 	height: 1px;
 }
@@ -1929,7 +1931,7 @@ form {
 .popup-or span {
 	width: 60px;
 	height: 60px;
-	border: 5px #eee solid;
+	border: 2px whitesmoke solid;
 	border-radius: 30px;
 	-webkit-border-radius: 30px;
 	text-align: center;
@@ -2216,7 +2218,6 @@ header {
 .header-top .language .title {
 	padding-right: 15px;
 	width: 35px;
-	background: url(../img/icon-7.png) right center no-repeat;
 	text-align: left;
 }
 
@@ -3099,13 +3100,12 @@ li:hover .megamenu {
 }
 
 .categories-menu li a {
-	font-size: 11px;
+
+	font-size: 18px;
 	line-height: 16px;
 	padding: 15px 46px 15px 20px;
-	font-weight: 700;
-	color: #888;
-	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	color: #000;
+    font-family:"Times New Roman",sans-serif;
 	border-bottom: 1px #f7f7f7 solid;
 	background: #fff;
 	display: block;
@@ -6807,17 +6807,25 @@ section {
 	font-weight: 600;
 	font-size: 26px;
 }
-
+.about .content p {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
+}
 .about .content ul {
 	list-style: none;
 	padding: 0;
 }
 
-.about .content ul li {
-	padding-left: 28px;
+.about .content ul li i{
+	padding-left: 10px;
 	position: relative;
-}
 
+}
+.about .content ul li{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 18px;
+    color: #4f4f4f;
+}
 .about .content ul li+li {
 	margin-top: 10px;
 }
@@ -6878,8 +6886,9 @@ section {
 }
 
 .why-us .content p {
-	font-size: 15px;
-	color: #848484;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
+	color: #4f4f4f;
 }
 
 .why-us .img {
@@ -6927,6 +6936,7 @@ section {
 }
 .why-us .accordion-list p {
 	color: #ffff;
+    font-size: 16px;
 }
 .why-us .accordion-list i {
 	font-size: 24px;
@@ -6936,6 +6946,7 @@ section {
 }
 
 .why-us .accordion-list p {
+    font-family: "Times New Roman", sans-serif;
 	margin-bottom: 0;
 	padding: 10px 0 0 0;
 }
@@ -6989,50 +7000,7 @@ section {
 	}
 }
 
-/*--------------------------------------------------------------
-  # Services
-  --------------------------------------------------------------*/
-.services .icon-box {
-	box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-	padding: 50px 30px;
-	transition: all ease-in-out 0.4s;
-	background: #fff;
-}
 
-.services .icon-box .icon {
-	margin-bottom: 10px;
-}
-
-.services .icon-box .icon i {
-	color: #ff7c4d;
-	font-size: 36px;
-	transition: 0.3s;
-}
-
-.services .icon-box h4 {
-	font-weight: 500;
-	margin-bottom: 15px;
-	font-size: 24px;
-}
-
-.services .icon-box h4 a {
-	color: #37517e;
-	transition: ease-in-out 0.3s;
-}
-
-.services .icon-box p {
-	line-height: 24px;
-	font-size: 14px;
-	margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-	transform: translateY(-10px);
-}
-
-.services .icon-box:hover h4 a {
-	color: #ff7c4d;
-}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -7249,6 +7217,7 @@ section {
 }
 
 .aboutD .content h3 {
+    font-family: "Tahoma", sans-serif;
     font-weight: 700;
     font-size: 34px;
     color: #fff;
@@ -7256,6 +7225,8 @@ section {
 }
 
 .aboutD .content p {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
@@ -7287,13 +7258,39 @@ section {
 }
 
 .aboutD .icon-boxes .icon-box h4 {
+    font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 10px 0;
 }
 
 .aboutD .icon-boxes .icon-box p {
-    font-size: 15px;
+    font-family: "Times New Roman", sans-serif;
+    font-size: 17px;
+}
+#Domotique-block #features #sfeatures_description{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 19px;
+    color: #666;
+}
+#Domotique-block #features .content h3{
+    font-family: "Tahoma", sans-serif;
+    font-size: 22px;
+    color:#555;
+}
+#Domotique-block #features .content .desc_domotique{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+ }
+#Domotique-block #features .content .ul_domotique_content li{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 17px;
+    color: #666;
+}
+#Domotique-block #features .content .p_domotique_content{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 17px;
+    color: #666;
 }
 
 @media (max-width: 1200px) {
@@ -7457,3 +7454,84 @@ section {
     line-height: 28px;
     margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# AboutUs style
+--------------------------------------------------------------*/
+#AboutUs-block .container p{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
+    color: #666;
+}
+#AboutUs-block .container .mt-3{
+    font-family: "Tahoma", sans-serif;
+    font-size: 28px;
+    color:#444444;
+}
+#AboutUs-block .container .simple-article{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+}
+
+#Services-block .container p{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 20px;
+    color: #666;
+}
+#Services-block .container h4{
+    font-family: "Tahoma", sans-serif;
+    font-size: 22px;
+    color:#555;
+}
+/*--------------------------------------------------------------
+# List Produit Design
+--------------------------------------------------------------*/
+#ListProduit-block .h4 {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 18px;
+}
+#ListProduit-block .listCat {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+#ListProduit-block ul {
+    margin-left: 10px;
+}
+
+#ListProduit-block #searchfield{
+    border-radius: 3px;
+    border: 1px #4444 solid;
+}
+#ListProduit-block .search-submit {
+   background-color:#ff7c4d;
+    border: 1px #4444 solid;
+    border-radius: 3px;
+    color: #ffff;
+}
+#ListProduit-block .search-submit:hover {
+    color: #ffff;
+}
+#ListProduit-block #backToLastCat .text
+{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 18px;
+    color: #666;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+#ListProduit-block #backToLastCat .fa-angle-left
+{
+    font-size: 18px;
+    color: #666;
+}
+#ListProduit-block #backToLastCat:hover
+{
+    color: #666;
+}
+
+
+

@@ -1,15 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    @if($origin == 'cat')
+    <meta name="description" content="{{$mother->label}}">
+    <meta property="og:description" content="{{$mother->label}}">
+    <meta property="og:title" content="{{$mother->label}}">
+    <meta name="keywords" content="Afric Domotique,matériel informatique,fournitures de bureau,Produits,{{$mother->label}}">
+    @else
+        <meta name="description" content="Produits et service d'Afric Domotique">
+        <meta property="og:description" content="Produits et service d'Afric Domotique">
+        <meta property="og:title" content="Produits et service d'Afric Domotique">
+        <meta name="keywords" content="Afric Domotique,matériel informatique,fournitures de bureau,Produits">
+    @endif
 @extends('shared_layout.header_footer')
 @section('content')
 <!-- LOADER -->
 <div id="loader-wrapper"></div>
 
-<div id="content-block">
+<div id="ListProduit-block">
     <!-- HEADER -->
 
     <div class="header-empty-space"></div>
 
     <div class="container">
-        <div class="empty-space col-xs-b15 col-sm-b30"></div>
+        <div class="empty-space col-xs-b5 col-md-b20"></div>
         <div class="breadcrumbs">
             <a href="/">home</a>
             <a href="/products?page=1">Produits</a>
@@ -22,8 +36,8 @@
             @endif
             @endif
         </div>
-        <div class="empty-space col-xs-b35 col-md-b35"></div>
 
+        <div class="empty-space col-xs-b15 col-sm-b30"></div>
         <div class="row">
             <div class="col-md-9 col-md-push-3">
 
@@ -128,10 +142,20 @@
                 </div>
 
                 <div class="empty-space col-xs-b35 col-md-b70"></div>
-                <div class="empty-space col-md-b70"></div>
+
             </div>
+            <div class="col-md-3 col-md-pull-9 listCat">
+                <form method="post" action="{{action('products_categoriesController@SearchQuery')}}">
+                    @csrf
+                    <div class="search-submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="submit"/>
+                    </div>
+                    <input class="simple-input" id="searchfield" type="text" value="" placeholder="Recherche Produit" />
+                </form>
+                <div class="empty-space col-xs-b25 col-sm-b20"></div>
             @if($origin == 'home')
-            <div class="col-md-3 col-md-pull-9">
+
                 <div class="h4 col-xs-b10">categories</div>
                 <ul class="categories-menu transparent">
                     @foreach($categories as $categorie)
@@ -141,18 +165,20 @@
                     @endforeach
                 </ul>
                 <div class="empty-space col-xs-b25 col-sm-b50"></div>
-            </div>
             @else
-                <div class="col-md-3 col-md-pull-9">
-                    <div class="h4 col-xs-b10">categories</div>
+                   <a href="/products?page=1" id="backToLastCat">
+                                <span class="button-wrapper">
+                                    <span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                                    <span class="text">Categories</span>
+                                </span>
+                    </a>
                     <ul class="categories-menu transparent">
-                        <a  class="button  size-1 style-5"   href="/products?page=1">
+                        <!--a  class="button  size-1 style-5"   href="/products?page=1">
                                 <span class="button-wrapper">
                                     <span class="icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
                                     <span class="text">voir plus de catégories</span>
                                 </span>
-                        </a>
-                        <hr>
+                        </a-->
                             <li >
                                 <a href="{{action('products_categoriesController@Categorie_products',['rowid'=>$mother->rowid])}}">{{$mother->label}}</a>
                                 @if($subCategories!=null)
@@ -165,8 +191,8 @@
 
                     </ul>
                     <div class="empty-space col-xs-b25 col-sm-b50"></div>
-                </div>
             @endif
+            </div>
         </div>
 
     </div>

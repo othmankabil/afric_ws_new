@@ -12,17 +12,17 @@
         "session_aboutUs": {
             "saboutUs_title": "À PROPOS DE NOUS",
             "saboutUs_description_left": "Depuis sa création, Son large département de produits et services, Afric Domotique est bien placé pour satisfaire aux exigences d’une large gamme de clients.",
-            "saboutUs_description_right": "La société Afric Domotique, à été crée en 2011, spécialisée dans la telecommunication et vente de matériel informatique, fournitures de bureau, services informatiques.",
+            "saboutUs_description_right": "La société Afric Domotique, à été crée en 2014, spécialisée dans la telecommunication et vente de matériel informatique, fournitures de bureau, services informatiques.",
             "saboutUs_li_text": ["L’équipe Afric Domotique intervient pour accompagner ses partenaires dans le choix des solutions technique.",
                 "Afric Domotique offre son accompagnement aux intégrateurs services tertiaire et industriel.",
                 "Nous proposons à nos clients des services complètes pour les professionnels, simple et compétitive."
             ],
             "saboutUs_btn_more": "lire encore",
-            "saboutUs_btn_more_url": "https://www.google.com"
+            "saboutUs_btn_more_url": "/aboutUs"
 
         },
         "session_whyUs": {
-            "swhyUs_title": "POURQUOI Choisir Afric Domotique ?",
+            "swhyUs_title": "POURQUOI Afric Domotique ?",
             "swhyUs_description": "Depuis 2 ans, Afric Domotique accompagne et conseille les entreprises professionnels pour mieux communiquer ! Spécialistes de la vente à distance de matériel de téléphonie, sécurité et services.",
             "swhyUs_label": [{
                     "question": "NOS ÉQUIPEMENTS DE COMMUNICATION AU MEILLEUR PRIX ?",

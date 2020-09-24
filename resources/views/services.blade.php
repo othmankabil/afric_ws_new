@@ -1,10 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="services d'afric Domotique">
+    <meta property="og:description" content="services d'afric Domotique">
+    <meta property="og:title" content="services d'afric Domotique">
+    <meta name="keywords" content="FORMATION DE VOS ÉQUIPES,CRM FIABLE, ÉVOLUTIVE ET SÉCURISÉE,SERVICE APRÈS VENTE PROFESSIONNEL,SERVICE COMMERCIAL,SERVICE TECHNIQUE">
 @extends('shared_layout.header_footer')
 @section('content')
 
     <!-- LOADER -->
     <div id="loader-wrapper"></div>
 
-    <div id="content-block">
+    <div id="Services-block">
         <!-- HEADER -->
 
         <div class="header-empty-space"></div>
