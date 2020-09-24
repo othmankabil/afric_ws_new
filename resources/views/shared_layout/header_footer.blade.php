@@ -113,7 +113,13 @@
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='services')?('active'): ('')}}">
                                         <a href="{{action('RoutingController@services')}}">Services</a>
                                     </li>
-
+                                    <li>
+                                        <a href="gallery1.html">SOLUTIONS</a>
+                                        <div class="menu-toggle"></div>
+                                        <ul>
+                                            <li> <a class="open-popup" data-rel="1">Grandstream</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='domotique')?('active'): ('')}}">
                                         <a href="{{action('RoutingController@domotique')}}">Domotique</a>
                                     </li>
@@ -158,8 +164,23 @@
         </div>
     </header>
 
+    <div class="popup-wrapper">
+        <div class="bg-layer"></div>
 
+        <div class="popup-content" data-rel="1">
+            <div class="layer-close"></div>
+            <div class="popup-container size-1">
+                <div class="popup-align">
+                    <h3 class="h3 text-center">Log in</h3>
+                    <div class="empty-space col-xs-b30"></div>
+                    <embed src="assets/pdf/s_grand.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="400px">
 
+                </div>
+                <div class="button-close"></div>
+            </div>
+        </div>
+
+    </div>
 
 
 
@@ -189,7 +210,11 @@
     <!-- Template Main JS File -->
     <script src="{{asset('assets/js/main.js')}}"></script>
     @yield('content')
+
+
+
     </body>
+<!-- popup read pdf!-->
 
    <footer id="footer" style="
    -webkit-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.2);
