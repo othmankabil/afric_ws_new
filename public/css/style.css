@@ -7532,6 +7532,13 @@ section {
 {
     color: #666;
 }
-
+/*--------------------------------------------------------------
+# PopUp read Pdf design
+--------------------------------------------------------------*/
+#PdfReader .popup-align {
+  padding-left: 4px;
+  padding-right: 2px;
+  padding-bottom: 4px;
+}
 
 
