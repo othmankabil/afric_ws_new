@@ -11,7 +11,7 @@
     <!-- LOADER -->
     <div id="loader-wrapper"></div>
 
-    <div id="content-block">
+    <div id="Services-block">
         <!-- HEADER -->
 
         <div class="header-empty-space"></div>

@@ -92,10 +92,10 @@
         <div class="header-bottom">
             <div class="content-margins">
                 <div class="row">
-                    <div class="col-xs-3 col-sm-1">
+                    <div class="col-xs-2 col-sm-1">
                         <a id="logo" href="{{action('RoutingController@index')}}"><img src="{{asset('img/logo-2.png')}}" alt="" /></a>
                     </div>
-                    <div class="col-xs-9 col-sm-11 text-right">
+                    <div class="col-xs-10 col-sm-11 text-right">
                         <div class="nav-wrapper">
                             <div class="nav-close-layer"></div>
                             <nav>
@@ -160,6 +160,9 @@
 
 
 
+
+
+
     <script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
     <script src="{{asset('js/swiper.jquery.min.js')}}"></script>
     <script src="{{asset('js/global.js')}}"></script>
@@ -190,7 +193,6 @@
 
    <footer id="footer" style="
    -webkit-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.4);
     box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.19);">
 
        <div class="footer-top">
