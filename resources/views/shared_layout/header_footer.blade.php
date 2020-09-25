@@ -117,7 +117,7 @@
                                         <a href="#">SOLUTIONS</a>
                                         <div class="menu-toggle"></div>
                                         <ul>
-                                            <li> <a class="open-popup" data-rel="1">Grandstream</a></li>
+                                            <li> <a class="open-popup" data-rel="1">Solution Education</a></li>
                                         </ul>
                                     </li>
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='domotique')?('active'): ('')}}">
@@ -171,8 +171,7 @@
             <div class="layer-close"></div>
             <div class="popup-container size-1">
                 <div class="popup-align">
-                    <embed src="assets/pdf/s_grand#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="500">
-
+                    <iframe type="application/pdf" src="https://afric-domotique.ma/assets/pdf/S_ECOLE.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="500"></iframe>
                 </div>
                 <div class="button-close"></div>
             </div>
