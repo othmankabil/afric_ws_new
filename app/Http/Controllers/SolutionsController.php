@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Solution\CreateSolutionRequest;
 use App\Solution;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SolutionsController extends Controller
 {
@@ -61,9 +62,10 @@ class SolutionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Solution $solution)
     {
-        //
+      // return view('admin.solutions.show')->withsolution($solution);
+        return response()->file(($solution->location));
     }
 
     /**

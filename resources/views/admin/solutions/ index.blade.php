@@ -37,7 +37,10 @@
                         <td data-title="date de creation ">{{$solution->created_at}}</td>
                         <td data-title="date de la dernière mise à jour: ">{{$solution->updated_at}}</td>
                         <td data-title="">
-                            <div class="button-close"></div>
+                            <form action="{{route('solutions.show',$solution->id)}}" method="put">
+                                <div  class="button-close"><input type="submit"></div>
+                            </form>
+
                         </td>
                     </tr>
                     @endforeach
