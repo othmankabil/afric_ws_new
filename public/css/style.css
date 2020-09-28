@@ -6156,7 +6156,7 @@ body.loaded .big-slider-product .preview {
 }
 
 .cart-table th {
-	background: #343434;
+	background: #f06431;
 	font-weight: 700;
 	font-family: 'Raleway', sans-serif;
 	font-size: 13px;
@@ -6183,7 +6183,7 @@ body.loaded .big-slider-product .preview {
 }
 
 .cart-table tbody tr {
-	border-bottom: 1px #eee solid;
+    border-bottom: 1px #eee solid;
 }
 
 .cart-table tbody td {

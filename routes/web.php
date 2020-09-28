@@ -31,3 +31,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //////////////
 Route::get('/solutions','solutionController@solutions');
+
+
+Route::resource('solutions','SolutionsController');

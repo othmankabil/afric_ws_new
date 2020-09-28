@@ -1,0 +1,24 @@
+Cpanel
+user : africdor
+mdp  : jusbdlmg@2
+
+-------------------------
+dolibarr
+
+user : afric-domotique-admin
+mdp  : pos1103
+-------------------------
+user sql de dolibarr cpanel
+login : africdor_dolib
+mdp :   0c6]56p!8S
+
+-------------------compte ftp
+
+connexion : afric-ftp
+Mot De passe : rREvx6PyXu0B
+
+-----------------------------------
+Nom d’utilisateur FTP: afric-ftp@afric-domotique.ma
+Serveur FTP: ftp.afric-domotique.ma
+Port FTP & et FTPS explicite:  21
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
