@@ -34,3 +34,4 @@ Route::get('/solutions','solutionController@solutions');
 
 
 Route::resource('solutions','SolutionsController');
+Route::get('solutions/{solution}/delete','SolutionsController@delete');

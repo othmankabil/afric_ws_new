@@ -114,10 +114,20 @@
                                         <a href="{{action('RoutingController@services')}}">Services</a>
                                     </li>
                                     <li>
-                                        <a href="#">SOLUTIONS</a>
+                                        @auth()
+                                        @if(\Illuminate\Support\Facades\Auth::user()->hasRole('admin'))
+                                        <a href="{{route('solutions.index')}}">SOLUTIONS</a>
+                                        @else
+                                            <a href="#">SOLUTIONS</a>
+                                        @endif
+                                        @else
+                                            <a href="#">SOLUTIONS</a>
+                                        @endauth
                                         <div class="menu-toggle"></div>
                                         <ul>
-                                            <li> <a class="open-popup" data-rel="1">Solution Education</a></li>
+                                            @foreach(\App\Solution::all() as $solution)
+                                            <li> <a  target="_blank" href="{{route('solutions.show',$solution->id)}}" >{{$solution->name}}</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="{{(\App\Http\Controllers\RoutingController::$active=='domotique')?('active'): ('')}}">
@@ -164,20 +174,7 @@
         </div>
     </header>
 
-    <div class="popup-wrapper" id="PdfReader">
-        <div class="bg-layer"></div>
 
-        <div class="popup-content" data-rel="1">
-            <div class="layer-close"></div>
-            <div class="popup-container size-1">
-                <div class="popup-align">
-                    <iframe type="application/pdf" src="https://afric-domotique.ma/assets/pdf/S_ECOLE.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" width="100%" height="500"></iframe>
-                </div>
-                <div class="button-close"></div>
-            </div>
-        </div>
-
-    </div>
 
 
 

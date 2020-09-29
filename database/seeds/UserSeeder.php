@@ -15,15 +15,13 @@ class UserSeeder extends Seeder
     {
         $admin_role =  \App\Role::where('name','Admin')->first();
         DB::table('users')->insert([
-            'name' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt('qwertyuio'),
+            'name' => 'Jarbane',
+            'email' => 'm.jabrane@afric-domotique.ma',
+            'password' => bcrypt('adminadmin'),
 
         ]);
-        $user = User::where('email','admin@admin.com')->first();
+        $user = User::where('email','m.jabrane@afric-domotique.ma')->first();
         $user->roles()->attach($admin_role);
-
-
     }
 
 }

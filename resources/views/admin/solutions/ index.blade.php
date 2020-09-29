@@ -14,13 +14,14 @@
             <div class="empty-space col-xs-b35 col-md-b50"></div>
 
             <div class="container">
+                <a class="btn btn-success mb-1" href="/solutions/create">ajouter</a>
                 <table class="cart-table">
                     <thead >
                     <tr>
-                        <th style="	text-align: center;">Nom de solution</th>
+                        <th style="	text-align: center;">Nom </th>
                         <th style="	text-align: center;">fichier pdf</th>
                         <th style="	text-align: center;">date de creation</th>
-                        <th style="	text-align: center;">date de la dernière mise à jour</th>
+                        <th style="	text-align: center;">date de  mise à jour</th>
                         <th style="	text-align: center;"></th>
                     </tr>
                     </thead>
@@ -31,16 +32,13 @@
                         <td data-title="fichier pdf: "> <a class="button size-2 style-6 block col-xs-b15"  href="{{asset($solution->location)}}"  target="_blank">
                                         <span class="button-wrapper">
                                             <span class="icon"><img src="{{asset('img/icon-datasheet.png')}}" alt=""></span>
-                                            <span class="text">Fiche technique du produit</span>
+                                            <span class="text">pdf</span>
                                         </span>
                             </a></td>
                         <td data-title="date de creation ">{{$solution->created_at}}</td>
                         <td data-title="date de la dernière mise à jour: ">{{$solution->updated_at}}</td>
                         <td data-title="">
-                            <form action="{{route('solutions.show',$solution->id)}}" method="put">
-                                <div  class="button-close"><input type="submit"></div>
-                            </form>
-
+                               <a class="delete-confirm " href="/solutions/{{$solution->id}}/delete"> <img src="{{asset('img/icon-5.png')}}" alt=""></a>
                         </td>
                     </tr>
                     @endforeach
@@ -51,5 +49,23 @@
                     <div class="empty-space col-xs-b35 col-md-b50"></div>
 
         </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $('.delete-confirm').on('click', function (event) {
+        event.preventDefault();
+        const url = $(this).attr('href');
+        swal({
+            title: 'êtes-vous sûr?',
+            text: 'cette solution sera supprimée définitivement!',
+            icon: 'warning',
+            buttons: ["Non", "Oui!"],
+        }).then(function(value) {
+            if (value) {
+                window.location.href = url;
+            }
+        });
+    });
+</script>
 
 @endsection
+

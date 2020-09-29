@@ -11,7 +11,7 @@ class SolutionsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('roles:admin');
+        $this->middleware('roles:admin',['except'=>['show']]);
     }
 
     /**
@@ -51,7 +51,7 @@ class SolutionsController extends Controller
                     'location'=> $pdf_file_location
                 ]
             );
-            return redirect(route('solutions.create'));
+            return redirect(route('solutions.index'));
         }return response('please upload a pdf file',415);
 
     }
@@ -65,7 +65,7 @@ class SolutionsController extends Controller
     public function show(Solution $solution)
     {
       // return view('admin.solutions.show')->withsolution($solution);
-        return response()->file(($solution->location));
+        return response()->file($solution->location);
     }
 
     /**
@@ -100,5 +100,11 @@ class SolutionsController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function delete(Solution $solution)
+    {
+        $solution->delete();
+        Storage::delete($solution->location);
+        return redirect(route('solutions.index'));
     }
 }

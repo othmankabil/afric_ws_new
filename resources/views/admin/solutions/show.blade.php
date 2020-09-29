@@ -22,3 +22,4 @@
         <div class="empty-space col-xs-b35 col-md-b70"></div>
 
 @endsection
+
