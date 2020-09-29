@@ -77,8 +77,8 @@
                                 @csrf
                             </form>
                         @endguest
-                        <div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o"
-                                    aria-hidden="true"></i></a></div>
+                        <!--div class="entry hidden-xs hidden-sm"><a href="#"><i class="fa fa-heart-o"
+                                    aria-hidden="true"></i></a></div-->
 
                         <div class="hamburger-icon">
                             <span></span>

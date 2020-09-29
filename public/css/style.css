@@ -5549,13 +5549,13 @@ span.pagination {
 }
 
 .tab-menu {
-	font-size: 11px;
+	font-size: 13px;
 	line-height: 16px;
 	padding: 8px 20px;
 	color: #888;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
+	font-family: 'Tahoma', sans-serif;
+	font-weight: 500;
 	display: block;
 	position: relative;
 	border-radius: 16px;
@@ -7541,4 +7541,39 @@ section {
   padding-bottom: 4px;
 }
 
+/*--------------------------------------------------------------
+# Product Detail Design
+--------------------------------------------------------------*/
+
+
+#Product-Detail #p_tile
+{
+    font-family: "Tahoma", sans-serif;
+    font-size: 20px;
+}
+#Product-Detail #p_cat
+{
+    font-size: 17px;
+}
+#Product-Detail .ref
+{
+    font-family: "Tahoma", sans-serif;
+    font-size: 16px;
+}
+#Product-Detail .desc-article
+{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 19px;
+    color: #666;
+}
+#Product-Detail .p_description
+{
+    font-family: "Times New Roman", sans-serif;
+    color: #666;
+    font-size: 18px;
+}
+#Product-Detail .tab-desc
+{
+
+}
 
