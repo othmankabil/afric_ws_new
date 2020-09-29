@@ -9,8 +9,8 @@
 
 @section('content')
     <div id="loader-wrapper"></div>
-    <div class="ListProduit-block">
-        <div class="header-empty-space"></div>
+    <div class="ListProduit-block" id="Product-Detail">
+        <div class="header-empty-space" ></div>
 
         <div class="container">
             <div class="empty-space col-xs-b15 col-sm-b30"></div>
@@ -39,6 +39,7 @@
                                      <div class="swiper-button-prev hidden"></div>
                                     <div class="swiper-button-next hidden"></div>
                                     <div class="swiper-wrapper">
+
                                         @foreach(\App\services\ProductService::getimages($product->ref) as $path)
                                         <div class="swiper-slide" style="padding: 5px">
                                             <div class="swiper-lazy-preloader"></div>
@@ -65,15 +66,15 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="simple-article size-3 grey col-xs-b5">{{\App\services\ProductService::getFirstCategorieLabel($product)}}</div>
-                            <div class="h4 col-xs-b25">{{$product->label}}</div>
+                            <div class="simple-article size-3 grey col-xs-b5" id="p_cat">{{\App\services\ProductService::getFirstCategorieLabel($product)}}</div>
+                            <div class="h4 col-xs-b25" id="p_tile">{{$product->label}}</div>
 
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="simple-article size-3 col-xs-b5">REFERENCE PRODUIT.: <span class="grey">{{$product->ref}}</span></div>
+                                    <div class="simple-article size-3 col-xs-b5 ref">REFERENCE PRODUIT : <span class="grey ref">{{$product->ref}}</span></div>
                                 </div>
                             </div>
-                            <div class="simple-article size-3 col-xs-b15">Ce produit offre des fonctionnalités de pointe pour maximiser la personnalisation de votre réseau, tout en étant optimisées pour fonctionner ensemble de manière transparente. Pour plus d'information veuillez demander de devis.</div>
+                            <div class="simple-article size-3 col-xs-b15 desc-article">Ce produit offre des fonctionnalités de pointe pour maximiser la personnalisation de votre réseau, tout en étant optimisées pour fonctionner ensemble de manière transparente. Pour plus d'information veuillez demander de devis.</div>
 
                             <a class="button size-2 style-6 block col-xs-b15"  href="{{asset(\App\services\ProductService::getSinglePdf($product->ref))}}"  target="_blank">
                                         <span class="button-wrapper">
@@ -81,6 +82,12 @@
                                             <span class="text">Fiche technique du produit</span>
                                         </span>
                             </a>
+                            <!--a class="button size-2 style-1 block col-xs-b15"  href="{{asset(\App\services\ProductService::getSinglePdf($product->ref))}}"  target="_blank">
+                                        <span class="button-wrapper">
+                                            <span class="icon"><img src="img/icon-favoris.png"  alt=""></span>
+                                            <span class="text">Ajouter aux favoris</span>
+                                        </span>
+                            </a-->
                             <div class="row m5 col-xs-b40">
                                 <div class="col-sm-12 col-xs-b10 col-sm-b0">
                                     <a class="button size-2 style-2 block open-popup" data-rel="5">
@@ -90,15 +97,7 @@
                                         </span>
                                     </a>
                                 </div>
-                                <!--div class="col-sm-6">
-                                    <a class="button size-2 style-1 block noshadow" href="#">
-                                    <span class="button-wrapper">
-                                        <span class="icon"><img src="img/icon-favoris.png" alt=""></span>
-                                        <span class="text">add to favourites</span>
 
-                                    </span>
-                                    </a>
-                                </div-->
                             </div>
                             <div class="row">
                                 <div class="col-sm-3">
@@ -127,7 +126,7 @@
                         <div class="tabulation-menu-wrapper">
                             <div class="tabulation-title simple-input">description</div>
                             <ul class="tabulation-toggle">
-                                <li><a class="tab-menu active">Description</a></li>
+                                <li><a class="tab-menu active tab-desc">Description</a></li>
                                 <li><a class="tab-menu">Caractéristiques</a></li>
                             </ul>
                         </div>
@@ -136,7 +135,7 @@
 
                             <div class="empty-space col-xs-b5"></div>
                             <div class="empty-space col-xs-b20"></div>
-                            <div class="simple-article size-2">{{$product->description}}</div>
+                            <div class="simple-article size-2 p_description">{{$product->description}}</div>
                             <div class="empty-space col-xs-b25"></div>
                         </div>
 
@@ -145,9 +144,12 @@
                             <div class="empty-space col-xs-b20"></div>
                             <div class="simple-article size-2"><p>
                                     @foreach(explode('<br />',  nl2br($product->note)) as $note)
-                                        {{ $note }}
+
+                                        @if ($note!='<br/>')
+                                          <p class="p_description">{{ $note }}</p>
+                                        @endif
                                     @if(!$loop->last)
-                                            <br>
+
                                     @endif
                                     @endforeach</p></div>
                             <div class="empty-space col-xs-b25"></div>
